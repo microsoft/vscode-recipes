@@ -1,3 +1,5 @@
+Debugging TypeScript in a Docker Container
+
 This recipe shows how to run and debug a VS Code TypeScript project in a Docker container.
 
 Create a new project folder 'server' and open it in VS Code. Inside the project create a folder `src` with a file `index.ts`:
