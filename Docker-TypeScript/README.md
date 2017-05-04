@@ -162,7 +162,6 @@ For attaching the VS Code node debugger to the server running in the Docker cont
 ```
 - The `localRoot`/`remoteRoot` attributes are used to map file paths between the docker container and the local system:
 `remoteRoot` is set to `/server` because that's the absolute path of the folder where the program lives in the docker container.
-
 - The `restart` flag is set to `true` because VS Code should try to re-attach to node.js whenever it loses the connection to it. This typically happens when nodemon detects a file change and restarts node.js.
 
 After running "Attach to Docker" you can debug the server in TypeScript source:
@@ -198,5 +197,4 @@ Instead of launching Docker from the command line and then attaching the debugge
 ```
 
 - here we set the 'docker-debug' npm script as the runtime executable and its arguments. The node debugger doesn't care about what is used as the `runtimeExecutable` as long as it opens a debug port that the node debugger can attach to.
-
 - we use the "integratedTerminal" because
