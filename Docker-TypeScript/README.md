@@ -1,4 +1,4 @@
-Debugging TypeScript in a Docker Container
+# Debugging TypeScript in a Docker Container
 
 This recipe shows how to run and debug a VS Code TypeScript project in a Docker container.
 
