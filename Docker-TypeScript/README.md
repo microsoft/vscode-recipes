@@ -2,7 +2,9 @@
 
 This recipe shows how to run and debug a VS Code TypeScript project in a Docker container.
 
-You can either follow the manual steps below or you can 'clone' the setup from a repository:
+The recipe assumes that you have a recent version of [Docker](https://www.docker.com) installed.
+
+You can either follow the manual steps in the next section or you can 'clone' the setup from a repository:
 ```sh
 git clone https://github.com/weinand/vscode-recipes.git
 cd vscode-recipes/Docker-TypeScript
@@ -21,10 +23,16 @@ import * as http from 'http';
 let reqCnt = 1;
 
 http.createServer((req, res) => {
+
+  const message = `Request Count: ${reqCnt}`;
+
   res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end(`<html><head><meta http-equiv="refresh" content="3"></head><body>Request Count : ${reqCnt}</body></html>`);
+  res.end(`<html><head><meta http-equiv="refresh" content="2"></head><body>${message}</body></html>`);
+
   console.log("handled request: " + reqCnt++);
 }).listen(3000);
+
+console.log('server running on port 3000');
 ```
 
 This is a trivial http server that serves a self-refreshing page showing a request counter.
@@ -108,7 +116,7 @@ But for a faster edit/compile/debug cycle we will use a more sophisticated appro
 Let's start with the 'watch' task by creating a `task.json` inside the `.vscode` folder:
 ```json
 {
-  "version": "0.1.0",
+   "version": "0.1.0",
   "tasks": [
     {
       "taskName": "tsc-watch",
@@ -170,7 +178,7 @@ For attaching the VS Code node debugger to the server running in the Docker cont
       "outFiles": [
         "${workspaceRoot}/dist/**/*.js"
       ]
-    },
+    }
   ]
 }
 ```
@@ -201,14 +209,13 @@ Instead of launching Docker from the command line and then attaching the debugge
       "request": "launch",
       "name": "Launch in Docker",
       "preLaunchTask": "tsc-watch",
-      "protocol": "legacy",
       "runtimeExecutable": "npm",
       "runtimeArgs": [ "run", "docker-debug" ],
       "port": 5858,
       "restart": true,
-      "timeout": 30000,
+      "timeout": 60000,
       "localRoot": "${workspaceRoot}",
-      "remoteRoot": "/code",
+      "remoteRoot": "/server",
       "outFiles": [
         "${workspaceRoot}/dist/**/*.js"
       ],
