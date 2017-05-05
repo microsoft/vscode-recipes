@@ -2,6 +2,17 @@
 
 This recipe shows how to run and debug a VS Code TypeScript project in a Docker container.
 
+You can either follow the manual steps below or you can 'clone' the setup from a repository:
+```sh
+git clone https://github.com/weinand/vscode-recipes.git
+cd vscode-recipes/Docker-TypeScript
+npm install
+code-insiders .
+press 'F5'
+```
+
+## Create Setup Manually
+
 Create a new project folder 'server' and open it in VS Code. Inside the project create a folder `src` with a file `index.ts`:
 
 ```ts
@@ -58,7 +69,7 @@ Add this `package.json` which lists the dependencies and defines some scripts fo
 - The `start` script runs the server in production mode.
 
 You can now run the server locally with these steps:
-```
+```sh
 npm install
 npm start
 ```
@@ -83,7 +94,7 @@ This creates the docker image from a node runtime image, copies the VS Code proj
 
 You can build and run a docker image 'server' with these steps:
 
-```
+```sh
 docker build -t server .
 docker run -p 3000:3000 server
 ```
@@ -95,7 +106,7 @@ For debugging this server in the Docker container we could just make node's debu
 But for a faster edit/compile/debug cycle we will use a more sophisticated approach by mounting the 'dist' folder of the VS Code workspace directly into the container running in Docker. Inside Docker we'll use 'nodemon' for tracking changes in the 'dist' folder and restart the node runtime automatically and in the VS Code workspace we'll use a watch task that automatically transpiles modified TypeScript source into the 'dist' folder.
 
 Let's start with the 'watch' task by creating a `task.json` inside the `.vscode` folder:
-```ts
+```json
 {
   "version": "0.1.0",
   "tasks": [
@@ -136,13 +147,13 @@ services:
 Here we mount the `dist` folder of the workspace into the Docker container (which hides whatever was in that location before). And we replace the `npm start` command from CMD in the Dockerfile by `npm run debug`. In the ports section we add a mapping for the node.js debug port.
 
 The `docker-compose.yml` will be used when running the docker-compose from the command line:
-```
+```sh
 docker-compose up
 ```
 
 For attaching the VS Code node debugger to the server running in the Docker container we use this launch configuration:
 
-```ts
+```json
 {
   "version": "0.2.0",
   "configurations": [
@@ -172,7 +183,7 @@ After running "Attach to Docker" you can debug the server in TypeScript source:
 - modify the message string in `index.ts:7` and after you have saved the file, the server running in Docker restarts and the browser shows the modified page.
 
 > **Please note**: when using Docker on Windows, modifying the source does not make nodemon restart node.js. On Windows nodemon cannot pick-up file changes from the mounted `dist` folder. For details see this [Docker issue](https://github.com/docker/for-win/issues/56). The workaround is to add the `--legacy-watch` flag to nodemon in the `debug` npm script:
-```js
+```json
 "debug": "nodemon --legacy-watch --watch ./dist --debug=5858 --nolazy ./dist/index.js",
 ```
 
@@ -181,7 +192,7 @@ After running "Attach to Docker" you can debug the server in TypeScript source:
 > **Please note**: the following requires VS Code 1.13.0
 
 Instead of launching Docker from the command line and then attaching the debugger to it, we can combine both steps in one launch configuration:
-```ts
+```json
 {
   "version": "0.2.0",
   "configurations": [
