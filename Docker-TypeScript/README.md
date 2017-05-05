@@ -103,6 +103,7 @@ Let's start with the 'watch' task by creating a `task.json` inside the `.vscode`
       "taskName": "tsc-watch",
       "command": "npm",
       "args": [ "run", "watch" ],
+      "isShellCommand": true,
       "isBackground": true,
       "isBuildCommand": true,
       "problemMatcher": "$tsc-watch",
@@ -170,9 +171,14 @@ After running "Attach to Docker" you can debug the server in TypeScript source:
 - set a breakpoint in `index.ts:9` and it will be hit as soon as the browser requests a new page,
 - modify the message string in `index.ts:7` and after you have saved the file, the server running in Docker restarts and the browser shows the modified page.
 
+> **Please note**: when using Docker on Windows, modifying the source does not make nodemon restart node.js. On Windows nodemon cannot pick-up file changes from the mounted `dist` folder. For details see this [Docker issue](https://github.com/docker/for-win/issues/56). The workaround is to add the `--legacy-watch` flag to nodemon in the `debug` npm script:
+```js
+"debug": "nodemon --legacy-watch --watch ./dist --debug=5858 --nolazy ./dist/index.js",
+```
+
 ## Further Simplifying the Debugging Setup
 
-> Please note: the following requires VS Code 1.13.0
+> **Please note**: the following requires VS Code 1.13.0
 
 Instead of launching Docker from the command line and then attaching the debugger to it, we can combine both steps in one launch configuration:
 ```ts

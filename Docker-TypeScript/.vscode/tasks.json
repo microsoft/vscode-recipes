@@ -5,9 +5,9 @@
   "tasks": [
     {
       "taskName": "tsc-watch",
-      "isShellCommand": true,
       "command": "npm",
       "args": [ "run", "watch" ],
+      "isShellCommand": true,
       "isBackground": true,
       "isBuildCommand": true,
       "problemMatcher": "$tsc-watch",
