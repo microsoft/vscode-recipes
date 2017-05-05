@@ -10,8 +10,11 @@ git clone https://github.com/weinand/vscode-recipes.git
 cd vscode-recipes/Docker-TypeScript
 npm install
 code-insiders .
-press 'F5'
 ```
+Inside VS Code press 'F5' to start the debug session.
+Then open a browser on localhost:3000 and watch the request counter increment every 3 seconds.
+
+To learn what's going on, please read the following detailed explanation.
 
 ## Create Setup Manually
 
