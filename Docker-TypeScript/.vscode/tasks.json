@@ -5,6 +5,7 @@
   "tasks": [
     {
       "taskName": "tsc-watch",
+      "isShellCommand": true,
       "command": "npm",
       "args": [ "run", "watch" ],
       "isBackground": true,
