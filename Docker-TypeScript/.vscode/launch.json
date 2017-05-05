@@ -39,12 +39,10 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "nodemon",
+      "name": "Local Nodemon",
       "preLaunchTask": "tsc-watch",
       "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run", "nodemon"
-      ],
+      "runtimeArgs": [ "run", "debug" ],
       "restart": true,
       "port": 5858,
       "console": "integratedTerminal",

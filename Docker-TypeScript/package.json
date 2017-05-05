@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.0.0",
   "scripts": {
-    "build": "tsc -p ./src",
+		"postinstall": "tsc -p ./src",
     "watch": "tsc -w -p ./src",
     "debug": "nodemon --watch ./dist --debug=5858 --nolazy ./dist/index.js",
     "start": "node ./dist/index.js",
