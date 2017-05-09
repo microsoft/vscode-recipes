@@ -1,6 +1,7 @@
 # Developing the MERN Starter in VS Code
 
-MERN is a scaffolding tool which makes it easy to build apps using Mongo, Express, React and NodeJS. The MERN Starter is a boilerplate project that gives you a solid head start on building universal React apps.
+MERN is a scaffolding tool which makes it easy to build apps using Mongo, Express, React and NodeJS. The MERN Starter is a boilerplate project for building a universal React app.
+
 This recipe shows how to run and debug the MERN Starter in VS Code.
 
 ## Create Starter project and open it in VS Code
