@@ -60,7 +60,7 @@ Add this `package.json` which lists the dependencies and defines some scripts fo
   "scripts": {
     "postinstall": "tsc -p ./src",
     "watch": "tsc -w -p ./src",
-    "debug": "nodemon --watch ./dist --debug=5858 --nolazy ./dist/index.js",
+    "debug": "nodemon --watch ./dist --debug=0.0.0.0:5858 --nolazy ./dist/index.js",
     "docker-debug": "docker-compose up",
     "start": "node ./dist/index.js"
   },
@@ -91,7 +91,7 @@ Then open a browser on localhost:3000 and watch the request counter increment ev
 For running the server in a docker container we need a `Dockerfile` in the root of your project:
 
 ```dockerfile
-FROM node:6.5.0-slim
+FROM node:7.4.0-slim
 
 WORKDIR /server
 
@@ -195,7 +195,7 @@ After running "Attach to Docker" you can debug the server in TypeScript source:
 
 > **Please note**: when using Docker on Windows, modifying the source does not make nodemon restart node.js. On Windows nodemon cannot pick-up file changes from the mounted `dist` folder because of this [issue](https://github.com/docker/for-win/issues/56). The workaround is to add the `--legacy-watch` flag to nodemon in the `debug` npm script:
 ```json
-"debug": "nodemon --legacy-watch --watch ./dist --debug=5858 --nolazy ./dist/index.js",
+"debug": "nodemon --legacy-watch --watch ./dist --debug=0.0.0.0:5858 --nolazy ./dist/index.js",
 ```
 
 ## Further Simplifying the Debugging Setup
@@ -212,6 +212,7 @@ Instead of launching Docker from the command line and then attaching the debugge
       "request": "launch",
       "name": "Launch in Docker",
       "preLaunchTask": "tsc-watch",
+      "protocol": "legacy",
       "runtimeExecutable": "npm",
       "runtimeArgs": [ "run", "docker-debug" ],
       "port": 5858,
