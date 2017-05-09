@@ -57,6 +57,6 @@ Instead of the `node` runtime executable, `nodemon` is used which watches file m
 
 With this setup it is possible to edit the source while the server is running: source edits automatically trigger a rebuild and restart the server. Because these restarts are quite expensive, we recommend that you change VS Code's `files.autoSave` setting from `after delay` to any of the other values. With this saves no longer occur automatically.
 
-The launch config has to use the integrated terminal because "npm run start" uses "nodemon" which is an interactive tool that reads from stdin (nodemon outputs: "to restart at any time, enter rs"). Reading from stdin is not supported in the debug console (REPL). So using the integrated terminal is not a workaround but recommended practice for interactive programs (see VS Code doc).
+The launch config uses the integrated terminal because `nodemon` is an interactive tool that reads from stdin and reading from stdin is not supported in the default debug console.
 
 > Please note: there is an unfortunate redundancy (and potential inconsistency) between the `protocol`, `runtimeArgs`, and `port` attributes. If the value of `protocol` is changed to `legacy`, the values for `runtimeArgs` and `port` must be changed as well, otherwise a problematic inconsistency will occur. This redundancy can be eliminated after we have implemented this [feature](https://github.com/Microsoft/vscode/issues/26315).
