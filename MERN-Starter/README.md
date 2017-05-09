@@ -55,8 +55,8 @@ This configuration closely follows the npm `start` script from the package.json 
 
 Instead of the `node` runtime executable, `nodemon` is used which watches file modifications and restarts the node program automatically. The `restart` attribute configures the VS Code node debugger to re-attach automatically whenever node terminates.
 
-With this setup it is possible to edit the source while the server is running: source edits automatically trigger a rebuild and restart the server. Because these restarts are quite expensive, we recommend that you change VS Code's `files.autoSave` setting from `after delay` to any of the other values. With this saves no longer occur automatically.
+With this setup it is possible to edit the source while the server is running: source edits automatically trigger a rebuild and restart the server. Because these restarts are quite expensive, we recommend that you change VS Code's `files.autoSave` setting from `after delay` to one of the other values. With this saves no longer occur automatically.
 
-The launch config uses the integrated terminal because `nodemon` is an interactive tool that reads from stdin and reading from stdin is not supported in the default debug console.
+The launch config uses the integrated terminal because `nodemon` is an interactive tool that reads from stdin which is not supported in the default debug console.
 
 > Please note: there is an unfortunate redundancy (and potential inconsistency) between the `protocol`, `runtimeArgs`, and `port` attributes. If the value of `protocol` is changed to `legacy`, the values for `runtimeArgs` and `port` must be changed as well, otherwise a problematic inconsistency will occur. This redundancy can be eliminated after we have implemented this [feature](https://github.com/Microsoft/vscode/issues/26315).
