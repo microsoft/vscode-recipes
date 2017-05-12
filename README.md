@@ -12,4 +12,4 @@ A collection of recipes for using VS Code with particular technologies.
 
 ## Angular
 
-- [Angular](https://github.com/weinand/vscode-recipes/issues)
+- [Angular](https://github.com/weinand/vscode-recipes/issues/1)
