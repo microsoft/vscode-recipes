@@ -8,6 +8,11 @@ This recipe shows how to run and debug the MERN Starter in VS Code.
 
 - Make sure your MongoDB is running. For MongoDB installation guide see [this](https://docs.mongodb.com/v3.0/installation/).
 
+- Make sure that you have nodemon installed globally. Otherwise install it:
+  ```
+  npm install nodemon -g
+  ```
+
 - Visit [MERN v2.0](http://mern.io) and install the MERN Starter v2.0:
   ```bash
   git clone https://github.com/Hashnode/mern-starter.git
@@ -59,4 +64,6 @@ With this setup it is possible to edit the source while the server is running: s
 
 The launch config uses the integrated terminal because `nodemon` is an interactive tool that reads from stdin which is not supported in the default debug console.
 
-> Please note: there is an unfortunate redundancy (and potential inconsistency) between the `protocol`, `runtimeArgs`, and `port` attributes. If the value of `protocol` is changed to `legacy`, the values for `runtimeArgs` and `port` must be changed as well, otherwise a problematic inconsistency will occur. This redundancy can be eliminated after we have implemented this [feature](https://github.com/Microsoft/vscode/issues/26315).
+> **Please note**: there is an unfortunate redundancy (and potential inconsistency) between the `protocol`, `runtimeArgs`, and `port` attributes. If the value of `protocol` is changed to `legacy`, the values for `runtimeArgs` and `port` must be changed as well, otherwise a problematic inconsistency will occur. This redundancy can be eliminated after we have implemented this [feature](https://github.com/Microsoft/vscode/issues/26315) for the 'legacy' and the 'inspector' protocol.
+
+> **Please note**: Currently this recipe requires that "nodemon" is installed globally (despite the fact that it would be available in `node_modules/.bin`). This requirement will be lifted after we have implemented this [feature]( https://github.com/Microsoft/vscode/issues/28100).
