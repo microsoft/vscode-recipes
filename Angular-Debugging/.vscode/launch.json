@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome with ng serve",
+      "url": "http://localhost:4200/#",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "trace": true,
+      "userDataDir": "${workspaceRoot}/.vscode/chrome"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome with ng test",
+      "url": "http://localhost:9876/debug.html",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "trace": true,
+      "userDataDir": "${workspaceRoot}/.vscode/chrome"
+    }
+  ]
+}
