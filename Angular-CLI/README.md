@@ -51,20 +51,14 @@ Then click on the *settings* icon to configure a launch.json file, selecting **C
         "request": "launch",
         "name": "Launch Chrome with ng serve",
         "url": "http://localhost:4200/#",
-        "webRoot": "${workspaceRoot}",
-        "sourceMaps": true,
-        "trace": true,
-        "userDataDir": "${workspaceRoot}/.vscode/chrome"
+        "webRoot": "${workspaceRoot}"
       },
       {
         "type": "chrome",
         "request": "launch",
         "name": "Launch Chrome with ng test",
         "url": "http://localhost:9876/debug.html",
-        "webRoot": "${workspaceRoot}",
-        "sourceMaps": true,
-        "trace": true,
-        "userDataDir": "${workspaceRoot}/.vscode/chrome"
+        "webRoot": "${workspaceRoot}"
       }
     ]
   }
