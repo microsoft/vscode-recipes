@@ -6,10 +6,8 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [MERN Starter](https://github.com/weinand/vscode-recipes/tree/master/MERN-Starter)
 
+- [Chrome Debugging with Angular CLI](https://github.com/weinand/vscode-recipes/tree/master/Angular-CLI)
+
 ## Container Technology
 
 - [Debugging TypeScript in a Docker Container](https://github.com/weinand/vscode-recipes/tree/master/Docker-TypeScript)
-
-## Angular
-
-- [Angular](https://github.com/weinand/vscode-recipes/issues/1)
