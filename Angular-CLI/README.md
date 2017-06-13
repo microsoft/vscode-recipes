@@ -80,9 +80,9 @@ Then click on the *settings* icon to configure a launch.json file, selecting **C
   ng serve
   ```
 
-- After the app is shown in the browser, go to the Debug view, select the 'Launch Chrome with ng serve' configuration, then press F5 or click the green button to start debugging.
+- Go to the Debug view, select the **'Launch Chrome with ng serve'** configuration, then press F5 or click the green button.
 
-- Refresh the browser and you should hit the breakpoint.
+- The app will be shown in a browser, but in order to hit the breakpoint you'll need to *refresh* the browser.
 
 ![angular-breakpoint](https://user-images.githubusercontent.com/2836367/27004337-40bca8d8-4dcd-11e7-837e-b7602a3a622a.png)
 
@@ -96,7 +96,7 @@ Then click on the *settings* icon to configure a launch.json file, selecting **C
   ng test
   ```
 
-- After the test run, go to the Debug view, select the 'Launch Chrome with ng test' configuration, then press F5 or click the green button to start debugging.
+- After the test run, go to the Debug view, select the **'Launch Chrome with ng test'** configuration, then press F5 or click the green button.
 
 - When a browser opens with the test list, click the link for the test in which you placed the breakpoint. You should then hit the breakpoint.
 
