@@ -12,6 +12,6 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging TypeScript in a Docker Container](https://github.com/weinand/vscode-recipes/tree/master/Docker-TypeScript)
 
-## Elektron
+## Electron
 
 - [Debugging Electron Main and Renderer](https://github.com/weinand/vscode-recipes/issues/10)
