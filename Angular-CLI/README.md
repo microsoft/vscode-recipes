@@ -46,19 +46,27 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
     "version": "0.2.0",
     "configurations": [
       {
+        "name": "Launch Chrome with ng serve",
         "type": "chrome",
         "request": "launch",
-        "name": "Launch Chrome with ng serve",
         "url": "http://localhost:4200/#",
         "webRoot": "${workspaceRoot}"
       },
       {
+        "name": "Launch Chrome with ng test",
         "type": "chrome",
         "request": "launch",
-        "name": "Launch Chrome with ng test",
         "url": "http://localhost:9876/debug.html",
         "webRoot": "${workspaceRoot}"
-      }
+      },
+      {
+        "name": "Launch ng e2e",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
+        "protocol": "inspector",
+        "args": ["${workspaceRoot}/protractor.conf.js"]
+      }      
     ]
   }
   ```
@@ -99,3 +107,15 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
 ![angular-test-breakpoint](https://user-images.githubusercontent.com/2836367/27004448-e5134ff8-4dce-11e7-8145-69de0956dd07.png)
 
+
+## Debug End-to-end Tests
+
+You can also debug your end-to-end tests running in Protractor with VS Code.
+
+1. Start your local web server via `ng serve`.
+
+2. Set a breakpoint in **app.e2e-spec.ts** on a line in one of the end-to-end tests.
+  
+4. After the test run, go to the Debug view, select the **'Launch ng e2e'** configuration, then press F5 or click the green button.
+
+Notice: You might need to update the `"protocol"` property to `legacy` if you are using an older version of Node (older than Node 8)
