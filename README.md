@@ -15,3 +15,7 @@ A collection of recipes for using VS Code with particular technologies.
 ## Electron
 
 - [Debugging Electron Main and Renderer](https://github.com/weinand/vscode-recipes/issues/10)
+
+## Emscripten
+
+- [Debug Emscripten translated C/C++](https://github.com/weinand/vscode-recipes/issues/20)
