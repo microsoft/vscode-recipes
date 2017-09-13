@@ -4,7 +4,9 @@ by [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
 This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [Electron](https://electron.atom.io) applications.
 
-[Electron](https://electron.atom.io) consists of two proceses: A Main process running in NodeJS and a render process in Chromium. This means that you'll need to use two debugger instances within VS Code to debug both processes. This is the reason for why you both the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug).
+[Electron](https://electron.atom.io) applications can consists of two process types: A Main process type running in NodeJS and a render process type in Chromium. This means that you'll need to use two debugger instances within VS Code to debug both processes. This is the reason for why you both the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug).
+
+**Note:** Please make sure you are using **Electron 1.7.4 or newer**, as our debuggers relies on the Inspector protocol.
 
 ## Getting Started
 
@@ -75,7 +77,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
   2. Go to the Debug view, select the **'Electron: Main'** configuration, then press F5 or click the green play button.
 
-  3. VS Code should now attempt to start your Electron app, and your breakpoint on `line 16` in `main.js` should be git
+  3. VS Code should now attempt to start your Electron app, and your breakpoint on `line 16` in `main.js` should be hit.
 
 ![breakpoint-main](breakpoint_main.png)
 
