@@ -16,7 +16,7 @@ A collection of recipes for using VS Code with particular technologies.
 
 ## Electron
 
-- [Debugging Electron Main and Renderer processes](https://github.com/Microsoft/vscode-recipes/master/Electron)
+- [Debugging Electron Main and Renderer processes](https://github.com/Microsoft/vscode-recipes/blob/master/Electron)
 
 ## Emscripten
 
