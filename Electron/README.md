@@ -114,7 +114,4 @@ Now that you have learned to debug both the Main and the Renderer process you ca
 2. Set breakpoints in any of the files like above.
 3. Party 🎉🔥 
 
-Note: This scenario is blocked by https://github.com/Microsoft/vscode-chrome-debug/issues/501
-
-
 
