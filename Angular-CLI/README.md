@@ -83,7 +83,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
   npm start
   ```
 
-- Go to the Debug view, select the **'Launch Chrome with ng serve'** configuration, then press F5 or click the green play button.
+- Go to the Debug view, select the **'ng serve'** configuration, then press F5 or click the green play button.
 
 - The app will be shown in a browser, but in order to hit the breakpoint you'll need to *refresh* the browser.
 
@@ -101,7 +101,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
   npm run test
   ```
 
-- After the test run, go to the Debug view, select the **'Launch Chrome with ng test'** configuration, then press F5 or click the green button.
+- After the test run, go to the Debug view, select the **'ng test'** configuration, then press F5 or click the green button.
 
 - When a browser opens with the test list, click the link for the test in which you placed the breakpoint. You should then hit the breakpoint:
 
@@ -116,6 +116,6 @@ You can also debug your end-to-end tests running in Protractor with VS Code.
 
 2. Set a breakpoint in **app.e2e-spec.ts** on a line in one of the end-to-end tests.
   
-4. After the test run, go to the Debug view, select the **'Launch ng e2e'** configuration, then press F5 or click the green button.
+4. After the test run, go to the Debug view, select the **'ng e2e'** configuration, then press F5 or click the green button.
 
 Notice: You might need to update the `"protocol"` property to `legacy` if you are using an older version of Node (older than Node 8)
