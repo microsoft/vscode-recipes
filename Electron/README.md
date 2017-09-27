@@ -17,7 +17,7 @@ This recipe shows how to use the built-in Node Debugger and the [Debugger for Ch
 3. This guide assumes that you are using the [electron-Quick-start project](https://github.com/electron/electron-quick-start). Clone the repo to get started
     > 
     ```
-    git clone git@github.com:electron/electron-quick-start.git
+    git clone https://github.com/electron/electron-quick-start.git
     cd electron-quick-start
     npm install
     code .
