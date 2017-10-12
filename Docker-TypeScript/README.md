@@ -9,7 +9,7 @@ You can either follow the manual steps in the next section or you can 'clone' th
 git clone https://github.com/weinand/vscode-recipes.git
 cd vscode-recipes/Docker-TypeScript
 npm install
-code-insiders .
+code .
 ```
 Inside VS Code press 'F5' to start the debug session.
 Then open a browser on localhost:3000 and watch the request counter increment every 3 seconds.
