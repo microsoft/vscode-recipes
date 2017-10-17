@@ -116,7 +116,7 @@ For debugging this server in the Docker container we could just make node's debu
 
 But for a faster edit/compile/debug cycle we will use a more sophisticated approach by mounting the 'dist' folder of the VS Code workspace directly into the container running in Docker. Inside Docker we'll use 'nodemon' for tracking changes in the 'dist' folder and restart the node runtime automatically and in the VS Code workspace we'll use a watch task that automatically transpiles modified TypeScript source into the 'dist' folder.
 
-Let's start with the 'watch' task by creating a `task.json` inside the `.vscode` folder:
+Let's start with the 'watch' task by creating a `tasks.json` inside the `.vscode` folder:
 ```json
 {
    "version": "0.1.0",
