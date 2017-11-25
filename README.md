@@ -4,13 +4,13 @@ A collection of recipes for using VS Code with particular technologies.
 
 ## Technology Scaffolding Tools
 
-- [MERN Starter](https://github.com/weinand/vscode-recipes/tree/master/MERN-Starter)
+- [Debugging MERN apps](https://github.com/weinand/vscode-recipes/tree/master/MERN-Starter)
 
-- [Chrome Debugging with Angular CLI](https://github.com/weinand/vscode-recipes/tree/master/Angular-CLI)
+- [Debugging AngularJS apps with Angular CLI](https://github.com/weinand/vscode-recipes/tree/master/Angular-CLI)
 
 - [Debugging Meteor Apps](https://github.com/weinand/vscode-recipes/issues/21)
 
-- [Debugging next.js with VS Code](https://github.com/Microsoft/vscode-recipes/tree/master/Next-js)
+- [Debugging next.js](https://github.com/Microsoft/vscode-recipes/tree/master/Next-js)
 
 ## Container Technology
 
