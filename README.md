@@ -10,6 +10,8 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Meteor Apps](https://github.com/weinand/vscode-recipes/issues/21)
 
+- [Debugging next.js with VS Code](https://github.com/Microsoft/vscode-recipes/tree/master/Next-js)
+
 ## Container Technology
 
 - [Debugging TypeScript in a Docker Container](https://github.com/weinand/vscode-recipes/tree/master/Docker-TypeScript)
