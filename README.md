@@ -14,6 +14,8 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Node.js with Nodemon](https://github.com/Microsoft/vscode-recipes/tree/master/nodemon)
 
+- [Debugging AngularJS/C# apps with AspNetCore.SpaTemplates](https://github.com/Microsoft/vscode-recipes/tree/master/Angular-SpaTemplates)
+
 ## Container Technology
 
 - [Debugging TypeScript in a Docker Container](https://github.com/weinand/vscode-recipes/tree/master/Docker-TypeScript)
