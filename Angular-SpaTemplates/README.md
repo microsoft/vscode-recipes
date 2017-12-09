@@ -57,7 +57,7 @@ Then click on the gear icon to configure a launch.json file:
 
 - Add the following configurations to the "configurations" array:
 
-  ```json
+  ```
   {
    "version": "0.2.0",
    "configurations": [
