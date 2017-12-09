@@ -58,7 +58,7 @@ Then click on the gear icon to configure a launch.json file:
 - Add the following configurations to the "configurations" array:
 
   ```json
-{
+  {
    "version": "0.2.0",
    "configurations": [
         ...
@@ -98,7 +98,8 @@ Then click on the gear icon to configure a launch.json file:
         }
         ...
     ]
-}  ```
+  }
+  ```
 
   ## Start Debugging
 
@@ -119,11 +120,11 @@ Then click on the gear icon to configure a launch.json file:
 - When a browser opens with the sample application, click "Counter" in the left navigation bar.
 Click "Increment".  You should then hit the Typescript breakpoint:
 
-![Typescript breakpoint](Typescript breakpoint.png)
+  ![Typescript breakpoint](Typescript_breakpoint.png)
 
 - Hit F5 or the green arrow in VSCode to continue execution.
 
 - Click "Fetch Data" in the left navigation bar. You should then hit the C# breakpoint.
 
-![C# breakpoint](CSharp breakpoint.png)
+  ![C# breakpoint](CSharp_breakpoint.png)
 
