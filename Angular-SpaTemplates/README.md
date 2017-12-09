@@ -61,7 +61,6 @@ Then click on the gear icon to configure a launch.json file:
   {
    "version": "0.2.0",
    "configurations": [
-        ...
         {
             "name": ".NET Core Launch (full)",
             "type": "coreclr",
@@ -96,7 +95,6 @@ Then click on the gear icon to configure a launch.json file:
             "name": "Full stack",
             "configurations": [".NET Core Launch (full)", "Chrome"]
         }
-        ...
     ]
   }
   ```
