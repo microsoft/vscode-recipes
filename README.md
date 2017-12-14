@@ -6,7 +6,7 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging MERN apps](https://github.com/weinand/vscode-recipes/tree/master/MERN-Starter)
 
-- [Debugging AngularJS apps with Angular CLI](https://github.com/weinand/vscode-recipes/tree/master/Angular-CLI)
+- [Debugging Angular apps with Angular CLI](https://github.com/weinand/vscode-recipes/tree/master/Angular-CLI)
 
 - [Debugging Next.js apps](https://github.com/Microsoft/vscode-recipes/tree/master/Next-js)
 
@@ -14,7 +14,7 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Node.js with Nodemon](https://github.com/Microsoft/vscode-recipes/tree/master/nodemon)
 
-- [Debugging AngularJS/C# apps with AspNetCore.SpaTemplates](https://github.com/Microsoft/vscode-recipes/tree/master/Angular-SpaTemplates)
+- [Debugging Angular/C# apps with AspNetCore.SpaTemplates](https://github.com/Microsoft/vscode-recipes/tree/master/Angular-SpaTemplates)
 
 ## Container Technology
 
