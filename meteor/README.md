@@ -80,7 +80,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
   
   1. Go to the Debug view, select the **'Meteor: Node'** configuration, then press F5 or click the green play button.
 
-  2. VS Code should now attempt to start your Next app. 
+  2. VS Code should now attempt to start your Meteor app. 
   
   3. Go ahead and set a breakpoint in **imports/api/tasks.js** on `line 25` within the `tasks.insert` function.
 
