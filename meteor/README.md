@@ -110,4 +110,56 @@ Now that you have learned to debug both the Main and the Renderer process you ca
 2. Set breakpoints in any of the files like above.
 3. Party 🎉🔥 
 
+## Debugging Meteor Tests
 
+The principles are very similar to those outlined above. In your `package.json` you probably already have a line like this:
+
+```json
+    "test": "meteor test --driver-package=practicalmeteor:mocha --port 3010",
+```
+
+Add another line with the new `--inspect` option:
+
+```json
+    "test-debug": "meteor test --inspect --driver-package=practicalmeteor:mocha --port 3010",
+```
+
+To enable debugging of these test scripts, you need to add two new launch configurations to your `launch.json` file - one for the server side tests, and the other for client side:
+
+```json
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Meteor: Server Tests",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "test-debug"
+      ],
+      "port": 9229,
+      "timeout": 60000
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Meteor: Client Tests",
+      "url": "http://localhost:3010",
+      "webRoot": "${workspaceRoot}"
+    },
+```
+
+Since it can take a while for the test server to fire up, increasing the timeout to 60 seconds may help. You can also add a new section in the `compounds` section of this file that will run both these tests together in a chrome browser:
+
+```json
+   {
+      "name": "Meteor: All Tests",
+      "configurations": [
+        "Meteor: Server Tests",
+        "Meteor: Client Tests"
+      ]
+    }
+```
+
+In the Debug view in VSCode, choose '**Meteor: All Tests**' and press F5. Chrome should open at `localhost:3010` - but there will be a connection refused error message displayed until the test server fires up and your tests run. Set break points (as explained above) and select the tests you wish to run in the browser.
+
+You may see timeout failures since while debugging, your tests will likely take more than the default mocha timeout period of 2 seconds to complete.
