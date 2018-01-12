@@ -20,7 +20,7 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Jest tests](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-jest-tests)
 
-- [Debugging Ruby on Rails (jRuby) apps](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-Ruby-on-Rails)
+- [Debugging Ruby on Rails apps](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-Ruby-on-Rails)
 
 ## Container Technology
 
