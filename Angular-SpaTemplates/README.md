@@ -34,7 +34,7 @@ This recipe shows how to use both the [Debugger for Chrome](https://github.com/M
     dotnet new amgular
     ```
 
-- Retore dependencies
+- Restore dependencies
 
     ```
     dotnet restore
