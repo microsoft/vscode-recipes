@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.env.osx": {
+        "PATH": "/Users/auchenberg/.platformio/penv/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    }
+}
