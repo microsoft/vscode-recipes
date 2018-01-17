@@ -16,7 +16,9 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Node.js with Nodemon](https://github.com/Microsoft/vscode-recipes/tree/master/nodemon)
 
-- [Debugging React apps (+ live editing)](https://medium.com/@auchenberg/live-edit-and-debug-your-react-apps-directly-from-vs-code-without-leaving-the-editor-3da489ed905f)
+- [Debugging React apps](https://medium.com/@auchenberg/live-edit-and-debug-your-react-apps-directly-from-vs-code-without-leaving-the-editor-3da489ed905f)
+
+- [Debugging Vue.js apps ](https://github.com/Microsoft/vscode-recipes/blob/master/vuejs-cli/README.md
 
 - [Debugging Mocha tests](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-mocha-tests)
 
