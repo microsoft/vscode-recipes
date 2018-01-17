@@ -16,7 +16,7 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Angular/C# apps with AspNetCore.SpaTemplates](https://github.com/Microsoft/vscode-recipes/tree/master/Angular-SpaTemplates)
 
-- [Debugging and live editing React apps](https://medium.com/@auchenberg/live-edit-and-debug-your-react-apps-directly-from-vs-code-without-leaving-the-editor-3da489ed905f)
+- [Debugging React apps (+ live editing)](https://medium.com/@auchenberg/live-edit-and-debug-your-react-apps-directly-from-vs-code-without-leaving-the-editor-3da489ed905f)
 
 - [Debugging Mocha tests](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-mocha-tests)
 
