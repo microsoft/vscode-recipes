@@ -1,4 +1,4 @@
-# Vue.js debugging in VS Code with Chrome and vue-cli
+# Vue.js debugging in Chrome and VS Code
 
 by [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
