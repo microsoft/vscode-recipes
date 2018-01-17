@@ -59,7 +59,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Node** 
     }
     ```
 
- Notice the `restart` property. This setting is key as it tells our debugger to re-attach to the Node process, if the proces get's terminiated. Read more about the setting [here in our docs](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_restarting-debug-sessions-automatically-when-source-is-edited).   
+ Notice the `restart` property. This setting is key as it tells our debugger to re-attach to the Node process, if the process get's terminiated. Read more about the setting [here in our docs](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_restarting-debug-sessions-automatically-when-source-is-edited).   
 
 ## Start your node app via your new NPM script
 
