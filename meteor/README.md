@@ -17,7 +17,7 @@ Meteor is used to write applications that runs on both on the server and client 
 3. This guide assumes that you are using the official sample app [simple-todos-react](https://github.com/meteor/simple-todos-react). Clone the repo to get started
     > 
     ```
-    git clone git@github.com:meteor/simple-todos-react.git
+    git clone https://github.com/meteor/simple-todos-react
     cd simple-todos-react
     npm install
     code .
