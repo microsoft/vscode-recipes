@@ -15,7 +15,7 @@ We recommend that you use our Node debugger in an `attach` configuration that's 
 2. This guide assumes that you are using the official sample app [nodejs-shopping-cart](https://github.com/gtsopour/nodejs-shopping-cart). Clone the repo to get started
     > 
     ```
-    git git@github.com:gtsopour/nodejs-shopping-cart.git
+    git clone git@github.com:gtsopour/nodejs-shopping-cart.git
     cd nodejs-shopping-cart
     npm install
     code .
