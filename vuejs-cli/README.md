@@ -39,6 +39,9 @@ Before you can debug your Vue components from VS Code you need to update the gen
 devtool: 'source-map',
 ```
 
+Make sure you updated both your **`build`** and **`dev`** configuration!
+
+
 ## Configure launch.json File
 
 1. Click on the Debugging icon in the Activity Bar to bring up the Debug view.
