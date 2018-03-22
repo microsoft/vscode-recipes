@@ -1,11 +1,11 @@
 {
     "version": "0.2.0",
-    "configurations": [       
+    "configurations": [
         {
             "type": "node",
             "request": "launch",
             "name": "Jest All",
-            "program": "${workspaceRoot}/node_modules/jest/bin/jest",
+            "program": "${workspaceFolder}/node_modules/jest/bin/jest",
             "args": [
                 "--runInBand"
             ],
@@ -16,7 +16,7 @@
             "type": "node",
             "request": "launch",
             "name": "Jest Current File",
-            "program": "${workspaceRoot}/node_modules/jest/bin/jest",
+            "program": "${workspaceFolder}/node_modules/jest/bin/jest",
             "args": [
                 "${file}"
             ],

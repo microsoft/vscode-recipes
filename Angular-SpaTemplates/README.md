@@ -15,7 +15,7 @@ This recipe shows how to use both the [Debugger for Chrome](https://github.com/M
 - .NET Core SDK 1.0 RC4 (or later) for Windows, Mac, or Linux
 
   ( See: [Building Single Page Applications on ASP.NET Core with JavaScriptServices](https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/) )
-  
+
 - Node.js, version 6 or later
 
 ## Getting Started
@@ -48,7 +48,7 @@ This recipe shows how to use both the [Debugger for Chrome](https://github.com/M
     ```
 
 Vscode might ask: "Required assets to build and debug are missing from your project. Add them?"
-If so, choose Yes. This will add a .vscode directory with a launch.json and tasks.json file. 
+If so, choose Yes. This will add a .vscode directory with a launch.json and tasks.json file.
 
 ## Configure launch.json File
 
@@ -87,7 +87,7 @@ Then click on the gear icon to configure a launch.json file:
             "request": "launch",
             "name": "Chrome",
             "url": "http://localhost:5000",
-            "webRoot": "${workspaceRoot}/wwwroot"
+            "webRoot": "${workspaceFolder}/wwwroot"
         }
     ],
     "compounds": [

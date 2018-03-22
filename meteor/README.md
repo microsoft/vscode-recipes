@@ -2,7 +2,7 @@
 
 by [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
-This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [meteor](https://www.meteor.com/) applications. 
+This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [meteor](https://www.meteor.com/) applications.
 
 Meteor is used to write applications that runs on both on the server and client with the same code, and this is a great match for VS Code, as we can debug both the server and client at the same time! This means that you'll need to use two debugger instances within VS Code to debug both ends. This is the reason for why you'll need both the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug).
 
@@ -15,7 +15,7 @@ Meteor is used to write applications that runs on both on the server and client 
 2. Make sure to the latest version of [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed in VS Code.
 
 3. This guide assumes that you are using the official sample app [simple-todos-react](https://github.com/meteor/simple-todos-react). Clone the repo to get started
-    > 
+    >
     ```
     git clone https://github.com/meteor/simple-todos-react
     cd simple-todos-react
@@ -34,7 +34,7 @@ Update your `package.json` section to:
     "start": "meteor run",
     "debug": "meteor run --inspect"
 },
-```  
+```
 
 ## Configure VS Code debugging with a launch.json file
 
@@ -54,7 +54,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "request": "launch",
             "name": "Meteor: Chrome",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceRoot}"
+            "webRoot": "${workspaceFolder}"
         },
         {
             "type": "node",
@@ -77,11 +77,11 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 ```
 
 ## Debugging the Meteor API Node process
-  
+
   1. Go to the Debug view, select the **'Meteor: Node'** configuration, then press F5 or click the green play button.
 
-  2. VS Code should now attempt to start your Meteor app. 
-  
+  2. VS Code should now attempt to start your Meteor app.
+
   3. Go ahead and set a breakpoint in **imports/api/tasks.js** on `line 25` within the `tasks.insert` function.
 
 ![breakpoint-main](breakpoint_node.png)
@@ -92,7 +92,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
 ## Debugging the Meteor renderer Chrome process
 
-  1. While your debug session is running you can go to the Debug view, select the **'Meteor: Chrome'**, which will launch Google Chrome and connect VS Code to the renderer process. 
+  1. While your debug session is running you can go to the Debug view, select the **'Meteor: Chrome'**, which will launch Google Chrome and connect VS Code to the renderer process.
 
   3. When connected go to `imports/ui/App.js` and set a breakpoint on `line 27` within the `handleSubmit` function.
 
@@ -104,11 +104,11 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
 ## Debugging of both Node and Chrome at the same time
 
-Now that you have learned to debug both the Main and the Renderer process you can take advantage of our [`compounds configurations`](https://code.visualstudio.com/updates/v1_8#_multitarget-debugging) that enables you to start multiple debugging sessions at the same time. 
+Now that you have learned to debug both the Main and the Renderer process you can take advantage of our [`compounds configurations`](https://code.visualstudio.com/updates/v1_8#_multitarget-debugging) that enables you to start multiple debugging sessions at the same time.
 
 1. Go to the Debug view, select the **'Meteor: All'**, which will connect VS Code to the both Main and Renderer process, and enable you to have a smooth development workflow.
 2. Set breakpoints in any of the files like above.
-3. Party 🎉🔥 
+3. Party 🎉🔥
 
 ## Debugging Meteor Tests
 
@@ -144,7 +144,7 @@ To enable debugging of these test scripts, you need to add two new launch config
       "request": "launch",
       "name": "Meteor: Client Tests",
       "url": "http://localhost:3010",
-      "webRoot": "${workspaceRoot}"
+      "webRoot": "${workspaceFolder}"
     },
 ```
 

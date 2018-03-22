@@ -176,10 +176,10 @@ For attaching the VS Code node debugger to the server running in the Docker cont
       "preLaunchTask": "tsc-watch",
       "port": 9222,
       "restart": true,
-      "localRoot": "${workspaceRoot}",
+      "localRoot": "${workspaceFolder}",
       "remoteRoot": "/server",
       "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
+        "${workspaceFolder}/dist/**/*.js"
       ]
     }
   ]
@@ -217,10 +217,10 @@ Instead of launching Docker from the command line and then attaching the debugge
       "port": 9222,
       "restart": true,
       "timeout": 60000,
-      "localRoot": "${workspaceRoot}",
+      "localRoot": "${workspaceFolder}",
       "remoteRoot": "/server",
       "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
+        "${workspaceFolder}/dist/**/*.js"
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"

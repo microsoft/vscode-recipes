@@ -44,7 +44,7 @@ VS Code automatically detects a MERN based project and creates this launch confi
     "runtimeArgs": [
         "--inspect=9222"
     ],
-    "program": "${workspaceRoot}/index.js",
+    "program": "${workspaceFolder}/index.js",
     "port": 9222,
     "restart": true,
     "env": {

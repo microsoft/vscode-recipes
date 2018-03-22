@@ -2,7 +2,7 @@
 
 by [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
-This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [next.js](https://github.com/zeit/next.js) applications. 
+This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [next.js](https://github.com/zeit/next.js) applications.
 
 Next.js allows ReactJS to be used both on the server and client, which is a great match for VS Code, as we can debug both the server and client at the same time! This means that you'll need to use two debugger instances within VS Code to debug both ends. This is the reason for why you'll need both the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug).
 
@@ -15,7 +15,7 @@ Next.js allows ReactJS to be used both on the server and client, which is a grea
 2. Make sure to the latest version of [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed in VS Code.
 
 3. This guide assumes that you are using the official sample app [nextgram](https://github.com/zeit/nextgram). Clone the repo to get started
-    > 
+    >
     ```
     git clone git@github.com:now-examples/nextgram.git
     cd nextgram
@@ -45,7 +45,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "request": "launch",
             "name": "Next: Chrome",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceRoot}"
+            "webRoot": "${workspaceFolder}"
         },
         {
             "type": "node",
@@ -69,11 +69,11 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
   ```
 
   ## Debugging of the Node process
-  
+
   1. Go to the Debug view, select the **'Next: Node'** configuration, then press F5 or click the green play button.
 
-  2. VS Code should now attempt to start your Next app. 
-  
+  2. VS Code should now attempt to start your Next app.
+
   3. Go ahead and set a breakpoint in **pages/index.js** on `line 56` within the `render` function.
 
 ![breakpoint-main](breakpoint_node.png)
@@ -84,7 +84,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
 ## Debugging of the renderer (Chrome) process
 
-  1. While your debug session is running you can go to the Debug view, select the **'Next: Chrome'**, which will launch Google Chrome and connect VS Code to the renderer process. 
+  1. While your debug session is running you can go to the Debug view, select the **'Next: Chrome'**, which will launch Google Chrome and connect VS Code to the renderer process.
 
   3. When connected go to `component/modal.js` and set a breakpoint on `line 16`
 
@@ -96,10 +96,10 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
 ## Debugging of both Node and Chrome at the same time
 
-Now that you have learned to debug both the Main and the Renderer process you can take advantage of our [`compounds configurations`](https://code.visualstudio.com/updates/v1_8#_multitarget-debugging) that enables you to start multiple debugging sessions at the same time. 
+Now that you have learned to debug both the Main and the Renderer process you can take advantage of our [`compounds configurations`](https://code.visualstudio.com/updates/v1_8#_multitarget-debugging) that enables you to start multiple debugging sessions at the same time.
 
 1. Go to the Debug view, select the **'Next: All'**, which will connect VS Code to the both Main and Renderer process, and enable you to have a smooth development workflow.
 2. Set breakpoints in any of the files like above.
-3. Party 🎉🔥 
+3. Party 🎉🔥
 
 

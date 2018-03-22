@@ -10,12 +10,12 @@
       "name": "Launch Program",
       "program": "${workspaceFolder}/src/index.ts",
       "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
+        "${workspaceFolder}/dist/**/*.js"
       ],
       "env": {
         "NODE_ENV": "development"
       }
-    },    
+    },
     {
       "type": "node",
       "request": "launch",
@@ -27,10 +27,10 @@
       "port": 5858,
       "restart": true,
       "timeout": 60000,
-      "localRoot": "${workspaceRoot}",
+      "localRoot": "${workspaceFolder}",
       "remoteRoot": "/server",
       "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
+        "${workspaceFolder}/dist/**/*.js"
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
@@ -43,10 +43,10 @@
       "protocol": "auto",
       "port": 5858,
       "restart": true,
-      "localRoot": "${workspaceRoot}",
+      "localRoot": "${workspaceFolder}",
       "remoteRoot": "/server",
       "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
+        "${workspaceFolder}/dist/**/*.js"
       ]
     },
     {
@@ -62,7 +62,7 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
+        "${workspaceFolder}/dist/**/*.js"
       ]
     }
   ]

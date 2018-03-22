@@ -27,7 +27,7 @@ To try the example you'll need to install dependencies by running:
       "type": "node",
       "request": "launch",
       "name": "Jest All",
-      "program": "${workspaceRoot}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": ["--runInBand"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
@@ -36,7 +36,7 @@ To try the example you'll need to install dependencies by running:
       "type": "node",
       "request": "launch",
       "name": "Jest Current File",
-      "program": "${workspaceRoot}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": ["${file}"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
