@@ -12,7 +12,7 @@ To try the example you'll need to install dependencies by running:
 
 `npm install`
 
-## Configure launch.json File for yur test framework
+## Configure launch.json File for your test framework
 
 * Click on the Debugging icon in the Activity Bar to bring up the Debug view.
   Then click on the gear icon to configure a launch.json file, selecting **Node** for the environment:
