@@ -37,7 +37,7 @@ To try the example you'll need to install dependencies by running:
       "request": "launch",
       "name": "Jest Current File",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["${file}"],
+      "args": ["${relativeFile}"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     }
