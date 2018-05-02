@@ -50,7 +50,13 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         "type": "chrome",
         "request": "launch",
         "url": "http://localhost:4200/#",
-        "webRoot": "${workspaceFolder}"
+        "webRoot": "${workspaceFolder}",
+        "sourceMapPathOverrides": {
+          "webpack:/./*": "${webRoot}/*",
+          "webpack:/src/*": "${webRoot}/src/*",
+          "webpack:/*": "*",
+          "webpack:/./~/*": "${webRoot}/node_modules/*"
+        }
       },
       {
         "name": "ng test",
