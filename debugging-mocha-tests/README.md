@@ -55,6 +55,44 @@ To try the example you'll need to install dependencies by running:
 }
 ```
 
+If you don't have all of your tests under a common "test" directory, then the following configuration can be used. It will recursively search for all \*.test.js files except for those that are in a node_modules directory.
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "type": "node",
+        "request": "launch",
+        "name": "Mocha All",
+        "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+        "args": [
+            "--timeout",
+            "999999",
+            "--colors",
+            "'${workspaceFolder}/{,!(node_modules)/}*/*.test.js'"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+    },
+    {
+        "type": "node",
+        "request": "launch",
+        "name": "Mocha Current File",
+        "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+        "args": [
+            "--timeout",
+            "999999",
+            "--colors",
+            "${file}"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}
+```
+
 ## Debugging all tests
 
 You can debug all tests by following the steps below:
