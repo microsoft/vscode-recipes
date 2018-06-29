@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This recipe shows how to use the built-in Node Debugger to debug Jest tests",
   "scripts": {
+    "start-debug": "node --inspect-brk node_modules/.bin/jest --runInBand --no-cache",
     "test": "jest"
   },
   "author": "Jag Reehal",
