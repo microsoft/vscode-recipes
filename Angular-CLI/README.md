@@ -50,13 +50,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         "type": "chrome",
         "request": "launch",
         "url": "http://localhost:4200/#",
-        "webRoot": "${workspaceFolder}",
-        "sourceMapPathOverrides": {
-          "webpack:/./*": "${webRoot}/*",
-          "webpack:/src/*": "${webRoot}/src/*",
-          "webpack:/*": "*",
-          "webpack:/./~/*": "${webRoot}/node_modules/*"
-        }
+        "webRoot": "${workspaceFolder}"
       },
       {
         "name": "ng test",
@@ -71,7 +65,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         "request": "launch",
         "program": "${workspaceFolder}/node_modules/protractor/bin/protractor",
         "protocol": "inspector",
-        "args": ["${workspaceFolder}/protractor.conf.js"]
+        "args": ["${workspaceFolder}/e2e/protractor.conf.js"]
       }
     ]
   }
