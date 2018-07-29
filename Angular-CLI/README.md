@@ -71,7 +71,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
   }
   ```
 
-  - Since `ng serve` also compiles the Angular application it can be usedas a build task.
+  - Since `ng serve` also compiles the Angular application it can be used as a build task if you prefer the "PROBLEMS" tab to `Ctrl + click` in the terminal.
   
   Add the following `ng serve` task to your `tasks.json` file:
   
