@@ -51,6 +51,14 @@ To try the example you'll need to install dependencies by running:
 }
 ```
 
+## Configure package.json File for your test framework
+* Add following Jest configuration to package.json:
+```
+"jest": {
+   "testEnvironment": "node"
+}
+```
+
 **Note for windows users** : if `node_modules/jest` is not available in your project, but `node_modules/jest-cli` is installed (e.g. if you are [using react-boilerplate](https://github.com/react-boilerplate/react-boilerplate/blob/v3.6.0/package.json#L221)) you can replace the windows attribute by this one for both launch configurations :
 
 ```json
