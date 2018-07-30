@@ -9,5 +9,8 @@
   "license": "ISC",
   "dependencies": {
     "jest": "22.0.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
