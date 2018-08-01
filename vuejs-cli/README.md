@@ -36,6 +36,8 @@ This recipe shows how to use the [Debugger for Chrome](https://github.com/Micros
 
 Before you can debug your Vue components from VS Code you need to update the generated webpack config to build sourcemaps that contains more information for our debugger.
 
+### Vue CLI 2.X
+
 - Go to `config/index.js` and find the `devtool` property. Update it to:
 
 ```json
@@ -44,6 +46,17 @@ devtool: 'source-map',
 
 Make sure you updated both your **`build`** and **`dev`** configuration!
 
+### Vue CLI 3.X
+
+- The `devtool` property needs to be set inside `vue.config.js`. Create the file in your project's root directory if it doesn't already exist.
+
+```js
+module.exports = {
+  configureWebpack: {
+    devtool: 'source-map'
+  }
+}
+```
 
 ## Configure launch.json File
 
