@@ -112,7 +112,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
 You can also debug your end-to-end tests running in Protractor with VS Code.
 
-1. Start your local web server via `ng serve`.
+1. Start your local web server via `ng e2e`.
 
 2. Set a breakpoint in **app.e2e-spec.ts** on a line in one of the end-to-end tests.
 
