@@ -1,8 +1,8 @@
-# Debugging tests in VS Code
+# Debugging node-tap tests in VS Code
 
-by [Jag Reehal](https://twitter.com/jagreehal)
+by [Trivikram Kamat](https://github.com/trivikr)
 
-This recipe shows how to use the built-in Node Debugger to debug [Jest](https://facebook.github.io/jest/) tests.
+This recipe shows how to use the built-in Node Debugger to debug [node-tap](https://github.com/tapjs/node-tap) tests.
 
 ## The example
 
@@ -26,58 +26,14 @@ To try the example you'll need to install dependencies by running:
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest All",
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "args": ["--runInBand"],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      }
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Jest Current File",
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "args": ["${relativeFile}"],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      }
+      "name": "Tap current file",
+      "program": "${workspaceFolder}/${relativeFile}",
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
 ```
 
-## Configure package.json File for your test framework
-* Add following Jest configuration to package.json:
-```
-"jest": {
-   "testEnvironment": "node"
-}
-```
-
-**Note for windows users** : if `node_modules/jest` is not available in your project, but `node_modules/jest-cli` is installed (e.g. if you are [using react-boilerplate](https://github.com/react-boilerplate/react-boilerplate/blob/v3.6.0/package.json#L221)) you can replace the windows attribute by this one for both launch configurations :
-
-```json
-"windows": {
-  "program": "${workspaceFolder}/node_modules/jest-cli/bin/jest",
-}
-```
-
-## Debugging all tests
-
-You can debug all tests by following the steps below:
-
-1. Set a breakpoint in a test file or files
-
-2. Go to the Debug view, select the **'Jest All'** configuration, then press F5 or click the green play button.
-
-3. Your breakpoint will now be hit
-
-![all](all.gif)
 
 ## Debugging the current test
 
@@ -85,8 +41,6 @@ You can debug the test you're editing by following the steps below:
 
 1. Set a breakpoint in a test file
 
-2. Go to the Debug view, select the **'Jest Current File'** configuration, then press F5 or click the green play button.
+2. Go to the Debug view, select the **'Tap current file'** configuration, then press F5 or click the green play button.
 
 3. Your breakpoint will now be hit
-
-![current](current.gif)
