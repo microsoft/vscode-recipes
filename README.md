@@ -24,6 +24,8 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Jest tests](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-jest-tests)
 
+- [Debugging Ruby on Rails apps](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-Ruby-on-Rails)
+
 ## Container Technology
 
 - [Debugging TypeScript in a Docker Container](https://github.com/weinand/vscode-recipes/tree/master/Docker-TypeScript)
