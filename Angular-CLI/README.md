@@ -71,6 +71,48 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
   }
   ```
 
+  - Since `ng serve` also compiles the Angular application it can be used as a build task if you prefer the "PROBLEMS" tab to `Ctrl + click` in the terminal (for smaller screens you could open the terminal only when the status bar shows there are problems).
+  
+  Add the following `ng serve` task to your `tasks.json` file:
+  
+  ```json
+  {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "identifier": "ng serve",
+        "type": "npm",
+        "script": "start",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": {
+          "name": "ng-serve-tsc-watch",
+          "label": "%typescript.problemMatchers.tscWatch.label%",
+          "owner": "typescript",
+          "source": "ts",
+          "applyTo": "closedDocuments",
+          "fileLocation": [
+            "relative",
+            "${cwd}"
+          ],
+          "pattern": "$tsc",
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": {
+              "regexp": "Compiling...|TS\\d+:"
+            },
+            "endsPattern": {
+              "regexp": "Compiled |Failed to compile."
+            }
+          }
+        }
+      },
+    ]
+  }
+  ```
+
   ## Start Debugging
 
 - Set a breakpoint in **app.component.ts** on the line that sets the `title` property of `AppComponent`.
