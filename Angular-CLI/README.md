@@ -88,8 +88,6 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
           "isDefault": true
         },
         "problemMatcher": {
-          "name": "ng-serve-tsc-watch",
-          "label": "%typescript.problemMatchers.tscWatch.label%",
           "owner": "typescript",
           "source": "ts",
           "applyTo": "closedDocuments",
