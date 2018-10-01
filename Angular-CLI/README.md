@@ -88,8 +88,6 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
           "isDefault": true
         },
         "problemMatcher": {
-          "name": "ng-serve-tsc-watch",
-          "label": "%typescript.problemMatchers.tscWatch.label%",
           "owner": "typescript",
           "source": "ts",
           "applyTo": "closedDocuments",
@@ -158,6 +156,6 @@ You can also debug your end-to-end tests running in Protractor with VS Code.
 
 2. Set a breakpoint in **app.e2e-spec.ts** on a line in one of the end-to-end tests.
 
-4. After the test run, go to the Debug view, select the **'ng e2e'** configuration, then press F5 or click the green button.
+3. After the test run, go to the Debug view, select the **'ng e2e'** configuration, then press F5 or click the green button.
 
 Notice: You might need to update the `"protocol"` property to `legacy` if you are using an older version of Node (older than Node 8)
