@@ -23,7 +23,7 @@ We recommend that you use our Node debugger in an `attach` configuration that's 
 
 ## Configure Nodemon to run in Debug mode
 
-Nodemon can be started in `debug mode` by using the `--inspect` flag like regular Node processes. The easist way to enable the debug mode is to add an `npm debug script` that starts `nodemon` with the right flag.
+Nodemon can be started in `debug mode` by using the `--inspect` flag like regular Node processes. The easiest way to enable the debug mode is to add an `npm debug script` that starts `nodemon` with the right flag.
 
 Update your `package.json` section to:
 
@@ -59,7 +59,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Node** 
     }
     ```
 
- Notice the `restart` property. This setting is key as it tells our debugger to re-attach to the Node process, if the process get's terminiated. Read more about the setting [here in our docs](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_restarting-debug-sessions-automatically-when-source-is-edited).   
+ Notice the `restart` property. This setting is key as it tells our debugger to re-attach to the Node process, if the process get's terminated. Read more about the setting [here in our docs](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_restarting-debug-sessions-automatically-when-source-is-edited).   
 
 ## Start your node app via your new NPM script
 

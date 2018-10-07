@@ -55,7 +55,7 @@ To try the example you'll need to install dependencies by running:
 }
 ```
 
-If you don't have all of your tests under a common "test" directory, then the following configuration can be used. It will recursively search for all \*.test.js files except for those that are in a node_modules directory.
+If you don't have all of your tests under a common "test" directory, then the following configurations can be used. It will recursively search for all \*.test.js files except for those that are in a node_modules directory.
 
 ```json
 {

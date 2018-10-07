@@ -178,7 +178,7 @@ Reference [StackOverflow#26247926](https://stackoverflow.com/questions/26247926/
 
 ## Bonus
 
-1. If you are using `Docker` to run your application, you need to append the below configuration in `lanunch.json#configutations` to dubug it. 
+1. If you are using `Docker` to run your application, you need to append the below configuration in `lanunch.json#configutations` to debug it. 
 
     ```json
     {
