@@ -96,10 +96,8 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
 ## Debugging of both Node and Chrome at the same time
 
-Now that you have learned to debug both the Main and the Renderer process you can take advantage of our [`compounds configurations`](https://code.visualstudio.com/updates/v1_8#_multitarget-debugging) that enables you to start multiple debugging sessions at the same time.
+Now that you have learned to debug both the Main and the Renderer process, you can take advantage of our [`compounds configurations`](https://code.visualstudio.com/updates/v1_8#_multitarget-debugging) that enables you to start multiple debugging sessions at the same time.
 
 1. Go to the Debug view, select the **'Next: All'**, which will connect VS Code to the both Main and Renderer process, and enable you to have a smooth development workflow.
 2. Set breakpoints in any of the files like above.
 3. Party 🎉🔥
-
-
