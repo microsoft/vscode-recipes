@@ -51,8 +51,9 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "type": "node",
             "request": "launch",
             "name": "Next: Node",
-            "runtimeExecutable": "next",
+            "runtimeExecutable": "npx",
             "runtimeArgs": [
+                "next",
                 "--inspect"
             ],
             "port": 9229,
