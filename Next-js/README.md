@@ -1,6 +1,6 @@
 # Next.js debugging in VS Code (Node and Chrome)
 
-by [Kenneth Auchenberg](https://twitter.com/auchenberg)
+By [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
 This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [next.js](https://github.com/zeit/next.js) applications.
 
@@ -14,7 +14,7 @@ Next.js allows ReactJS to be used both on the server and client, which is a grea
 
 2. Make sure to the latest version of [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed in VS Code.
 
-3. This guide assumes that you are using the official sample app [nextgram](https://github.com/zeit/nextgram). Clone the repo to get started
+3. This guide assumes that you are using the official sample app [nextgram](https://github.com/zeit/nextgram). Clone the repo to get started:
     >
     ```
     git clone git@github.com:now-examples/nextgram.git
@@ -78,7 +78,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
 ![breakpoint-main](breakpoint_node.png)
 
-  4. Open your favorite browser and go to `http://localhost:3000`
+  4. Open your favorite browser and go to `http://localhost:3000`.
 
   5. Your breakpoint should now be hit.
 
@@ -86,7 +86,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
   1. While your debug session is running you can go to the Debug view, select the **'Next: Chrome'**, which will launch Google Chrome and connect VS Code to the renderer process.
 
-  3. When connected go to `component/modal.js` and set a breakpoint on `line 16`
+  3. When connected go to `component/modal.js` and set a breakpoint on `line 16`.
 
   4. Now go to your Google Chrome window and click one of the images that opens in a modal.
 
