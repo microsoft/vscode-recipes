@@ -14,7 +14,7 @@ Next.js allows ReactJS to be used both on the server and client, which is a grea
 
 2. Make sure to the latest version of [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed in VS Code.
 
-3. This guide assumes that you are using the official sample app [nextgram](https://github.com/zeit/nextgram). Clone the repo to get started.
+3. This guide assumes that you are using the official sample app [nextgram](https://github.com/zeit/nextgram). Clone the repo to get started:
     >
     ```
     git clone git@github.com:now-examples/nextgram.git
