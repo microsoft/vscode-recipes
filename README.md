@@ -26,6 +26,9 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Ruby on Rails apps](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-Ruby-on-Rails)
 
+- [Debugging PHP with PHP Debug and XDebug](https://github.com/Microsoft/vscode-recipes/tree/master/PHP)
+
+
 ## Container Technology
 
 - [Debugging TypeScript in a Docker Container](https://github.com/weinand/vscode-recipes/tree/master/Docker-TypeScript)
