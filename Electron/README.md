@@ -1,6 +1,6 @@
 # Electron debugging (main and renderer process)
 
-by [Kenneth Auchenberg](https://twitter.com/auchenberg)
+By [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
 This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [Electron](https://electron.atom.io) applications.
 
@@ -98,11 +98,11 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
   2. While your debug session is running you can go to the Debug view, select the **'Electron: Renderer'**, which will connect VS Code to the Electron renderer process.
 
-  3. When connected go to `renderer.js` and set a breakpoint on `line 6`
+  3. When connected go to `renderer.js` and set a breakpoint on `line 6`.
 
   4. Now go to your Electron app window and  reload the page (View -> reload or CMD+R) to make sure the breakpoints are set.
 
-  5. Your breakpoint in `renderer.js` on `line 6` should now be hit, and you can debug the Renderer process
+  5. Your breakpoint in `renderer.js` on `line 6` should now be hit, and you can debug the Renderer process.
 
 ![breakpoint-renderer](breakpoint_renderer.png)
 
