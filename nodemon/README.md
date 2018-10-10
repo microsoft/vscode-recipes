@@ -1,8 +1,8 @@
 # Node.js debugging in VS Code with Nodemon
 
-by [Kenneth Auchenberg](https://twitter.com/auchenberg)
+By [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
-This recipe shows how to use the built-in Node Debugger to debug Nodejs applications that's using [Nodemon](https://nodemon.io/).
+This recipe shows how to use the built-in Node Debugger to debug Nodejs applications that use [Nodemon](https://nodemon.io/).
 
 Nodemon is a utility that will monitor for any changes in your source and automatically restart your server, and our Node debugger for VS Code supports automatic re-attaching to the Node process.
 
@@ -89,5 +89,5 @@ The next step is to start your Node app via your new `npm run debug` script. We 
   
   7. Nodemon should kick in after the change, and you should see VS Code re-attach to the newly spawned Node process automatically.
 
-  8. Party 🎉🔥 
+  8. Party 🎉🔥
 
