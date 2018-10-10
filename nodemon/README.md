@@ -89,5 +89,5 @@ The next step is to start your Node app via your new `npm run debug` script. We 
   
   7. Nodemon should kick in after the change, and you should see VS Code re-attach to the newly spawned Node process automatically.
 
-  8. Party 🎉🔥 .
+  8. Party 🎉🔥
 
