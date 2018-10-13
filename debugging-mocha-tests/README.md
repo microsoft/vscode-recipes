@@ -93,6 +93,39 @@ If you don't have all of your tests under a common "test" directory, then the fo
 }
 ```
 
+If you are running mocha will multiple arguments, you may consider creating an opt file that store all these arguments (i.e name it as mocha.opts).
+
+Example file contents with mocha arguments: 
+
+```
+--timeout 999999
+--colors
+--full-trace  
+```
+
+Reference the mocha opts file with --opts in configuration as shown below
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Mocha Test All with Options",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "--opts", 
+                "${workspaceFolder}/support/mocha.opts",
+                "${workspaceFolder}/test"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}
+```
+
 ## Debugging all tests
 
 You can debug all tests by following the steps below:
