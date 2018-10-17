@@ -138,7 +138,7 @@ Let's start with the 'watch' task by creating a `tasks.json` inside the `.vscode
 The `tsc-watch` task runs the npm `watch` script and registers as VS Code's 'build' command.
 The build command will be automatically triggered whenever a debug session is started (but it can be triggered manually as well).
 
-For the modified Docker setup we use 'docker-compose' because it allows to override individual steps in the 'Dockerfile'.
+For the modified Docker setup we use 'docker-compose' because it allows us to override individual steps in the 'Dockerfile'.
 
 Create a `docker-compose.yml` file side-by-side to the `Dockerfile`:
 
@@ -190,8 +190,8 @@ For attaching the VS Code node debugger to the server running in the Docker cont
 - The `restart` flag is set to `true` because VS Code should try to re-attach to node.js whenever it loses the connection to it. This typically happens when nodemon detects a file change and restarts node.js.
 
 After running "Attach to Docker" you can debug the server in TypeScript source:
-- set a breakpoint in `index.ts:9` and it will be hit as soon as the browser requests a new page,
-- modify the message string in `index.ts:7` and after you have saved the file, the server running in Docker restarts and the browser shows the modified page.
+- Set a breakpoint in `index.ts:9` and it will be hit as soon as the browser requests a new page,
+- Modify the message string in `index.ts:7` and after you have saved the file, the server running in Docker restarts and the browser shows the modified page.
 
 > **Please note**: when using Docker on Windows, modifying the source does not make nodemon restart node.js. On Windows nodemon cannot pick-up file changes from the mounted `dist` folder because of this [issue](https://github.com/docker/for-win/issues/56). The workaround is to add the `--legacy-watch` flag to nodemon in the `debug` npm script:
 ```json
@@ -228,5 +228,5 @@ Instead of launching Docker from the command line and then attaching the debugge
   ]
 }
 ```
-- here we set the `docker-debug` npm script as the runtime executable and its arguments. The node debugger doesn't care about what is used as the `runtimeExecutable` as long as it opens a debug port that the node debugger can attach to.
-- we use the `integratedTerminal` because we want to be able to kill docker-compose by using 'Control-C'. This is not possible with the Debug Console.
+- Here we set the `docker-debug` npm script as the runtime executable and its arguments. The node debugger doesn't care about what is used as the `runtimeExecutable` as long as it opens a debug port that the node debugger can attach to.
+- We use the `integratedTerminal` because we want to be able to kill docker-compose by using 'Control-C'. This is not possible with the Debug Console.
