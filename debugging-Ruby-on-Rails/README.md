@@ -2,7 +2,7 @@
 
 by [@karuppasamy](https://twitter.com/samykaruppa)
 
-This recipe shows how to debug Ruby on Rails (w/o jRuby) applicaiton using the VS Code extension [vscode-ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) along with the ruby gems [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [ruby-debug-base](https://rubygems.org/gems/ruby-debug-base) or [debase](https://rubygems.org/gems/debase).
+This recipe shows how to debug a Ruby on Rails (without jRuby) application using the VS Code extension [vscode-ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) along with the Ruby gems [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [ruby-debug-base](https://rubygems.org/gems/ruby-debug-base) or [debase](https://rubygems.org/gems/debase).
 
 ## Getting Started
 
