@@ -6,15 +6,15 @@ This recipe shows how to debug a Ruby on Rails (without jRuby) application using
 
 ## Getting Started
 
-1. Make sure to have the latest version of VS Code installed.
+1. Make sure you have the latest version of VS Code installed.
 
-2. Make sure to have the extension [vscode-ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) installed.
+2. Make sure you have the extension [vscode-ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) installed.
 
-2. If you are using Ruby v1.9.x, add [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [ruby-debug-base19x](https://rubygems.org/gems/ruby-debug-base19x) gems in your Gemfile followed by run a command `bundle install`
+2. If you are using Ruby v1.9.x, add [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [ruby-debug-base19x](https://rubygems.org/gems/ruby-debug-base19x) gems in your Gemfile followed by the `bundle install` command in your terminal.
 
-3. If you are using Ruby v2.x, add [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [debase](https://rubygems.org/gems/debase) gems in your Gemfile followed by run a command `bundle install`
+3. If you are using Ruby v2.x, add [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [debase](https://rubygems.org/gems/debase) gems in your Gemfile followed by the `bundle install` command in your terminal.
 
-4. If you are using jRuby, add [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [ruby-debug-base](https://rubygems.org/gems/ruby-debug-base) gems in your Gemfile followed by run a command `bundle install` 
+4. If you are using jRuby, add [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [ruby-debug-base](https://rubygems.org/gems/ruby-debug-base) gems in your Gemfile followed by the `bundle install` command in your terminal.
 
 
 ## Configure VS Code debugging with a launch.json file
@@ -36,7 +36,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Launch*
     /path/to/rubygem/bin/rspec
     ```
 
-5. Replace content of the generated launch.json with the following configurations with correct `pathToBundler` and `pathToRDebugIDE` path:
+5. Replace the content of the generated launch.json file with the following configurations in the `pathToBundler` and `pathToRDebugIDE` path:
 
     ```json
     {
@@ -98,7 +98,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Launch*
     }
     ```
 
-6. If you are using jRuby, you want to add the below `JRUBY` environment variable under the above configurations **'Start Rails server'** and **'Debug Rails server'**. So, it will be like
+6. If you are using jRuby, you want to add the below `JRUBY` environment variable under the above configurations **'Start Rails server'** and **'Debug Rails server'**. So, it will be like:
 
     ```json
     {
