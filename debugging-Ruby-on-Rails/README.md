@@ -20,9 +20,10 @@ This recipe shows how to debug a Ruby on Rails (without jRuby) application using
 ## Configure VS Code debugging with a launch.json file
 
 1. Click on the Debugging icon in the Activity Bar to bring up the Debug view.
-Then click on the gear icon to configure a launch.json file, selecting **Launch** for the environment:
 
-2. Before that, get a full path of the gem `bundle`, `ruby-debug-ide` and `rspec`
+2. Then click on the gear icon to configure a launch.json file, selecting **Launch** for the environment:
+
+3. Before that, get a full path of the gem `bundle`, `ruby-debug-ide` and `rspec`
 
     ```bash
     $: which bundle
@@ -35,8 +36,8 @@ Then click on the gear icon to configure a launch.json file, selecting **Launch*
     $: which rspec
     /path/to/rubygem/bin/rspec
     ```
-
-5. Replace the content of the generated launch.json file with the following configurations in the `pathToBundler` and `pathToRDebugIDE` path:
+    
+4. Replace the content of the generated launch.json file with the following configurations in the `pathToBundler` and `pathToRDebugIDE` path:
 
     ```json
     {
@@ -97,8 +98,8 @@ Then click on the gear icon to configure a launch.json file, selecting **Launch*
         ]
     }
     ```
-
-6. If you are using jRuby, you want to add the below `JRUBY` environment variable under the above configurations **'Start Rails server'** and **'Debug Rails server'**. So, it will be like:
+    
+5. If you are using jRuby, you want to add the below `JRUBY` environment variable under the above configurations **'Start Rails server'** and **'Debug Rails server'**. So, it will be like:
 
     ```json
     {
@@ -144,15 +145,15 @@ Reference [StackOverflow#26247926](https://stackoverflow.com/questions/26247926/
 
 2. Go to the Debug view, select the **'Debug Rails server'** (or **'Debug Rails + jruby server'** if you are using jRuby) configuration, then press F5 or click the green play button.
 
-2. VS Code should now show the rails server logs.
+3. VS Code should now show the rails server logs.
 
-3. Go ahead and set a breakpoint in any `.rb` file.
+4. Go ahead and set a breakpoint in any `.rb` file.
 
-4. Open your favorite browser and go to `http://localhost:3000`
+5. Open your favorite browser and go to `http://localhost:3000`
 
-5. Your breakpoint should now be hit.
+6. Your breakpoint should now be hit.
 
-6. Party 🎉🔥 
+7. Party 🎉🔥 
 
 ## Run All spec
 
