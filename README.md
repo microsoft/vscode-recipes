@@ -28,6 +28,7 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging PHP with PHP Debug and XDebug](https://github.com/Microsoft/vscode-recipes/tree/master/PHP)
 
+- [Debugging Gatsby.js build process](https://github.com/Microsoft/vscode-recipes/tree/master/Gatsby-js)
 
 ## Container Technology
 
