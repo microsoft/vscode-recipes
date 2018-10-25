@@ -6,11 +6,11 @@ This recipe shows how to use the [PHP Debug](https://github.com/Microsoft/vscode
 
 ## Getting Started
 
-**Fistly we you gotta install [XDebug](https://xdebug.org).**
+**Fistly you gotta install [XDebug](https://xdebug.org).**
 
 ### Installing XDebug
 
-Let's to this by following the [PHP Debug](https://github.com/felixfbecker/vscode-php-debug) insctructions:
+Let's do this by following the [PHP Debug](https://github.com/felixfbecker/vscode-php-debug) insctructions:
 
 > If you have `pecl` enabled, you can install XDebug via `pecl install xdebug` and jump to step 3.
 

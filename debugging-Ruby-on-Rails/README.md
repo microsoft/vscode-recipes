@@ -211,7 +211,7 @@ Reference [StackOverflow#26247926](https://stackoverflow.com/questions/26247926/
                 - "26162:26162"
     ```
 
-3. If you are running multiple docker rails applications at a same time, you want make sure your ports should be uniq. (26162 is a dispatcher-port).
+3. If you are running multiple docker rails applications at the same time, you want make sure your ports should be uniq. (26162 is a dispatcher-port).
 
     ```yml
     command: bundle exec rdebug-ide --debug --host 0.0.0.0 --port 1235 --dispatcher-port 26163 -- rails s -p 4000 -b 0.0.0.0
