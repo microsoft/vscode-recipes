@@ -6,8 +6,8 @@ This procedure is tested with:
  - Ubuntu 16.04 LTS
  
 1. Make you sure you have installed [chrome debug extension](https://github.com/Microsoft/vscode-chrome-debug)
-2. Open debug section in Visual Studio Code
-3. click on "Configuration" selector (if you didn't set up any debug configuration yet, you will see "No Configuration") and select "Add Config (your project's name)". Then select "Chrome" as environment.
+2. Open debug section in Visual Studio Code ![debug](webpack-debug-1.png)
+3. click on "Configuration" selector (if you didn't set up any debug configuration yet, you will see "No Configuration") and select "Add Config (your project's name)". Then select "Chrome" as environment. ![debug-new](webpack-debug--no-configuration.jpg)
 
 Visual Studio Code will create a new file`.vscode/launch.json`. This file contains your debug and launch configuration.
 
@@ -40,7 +40,7 @@ To verify the correctness of your settings, try to put a breakpoint in your code
 Webpack can be configured in many ways and versions . For this reason sometimes connecting it to debug tools, in general, is hard. 
 
 Here some hints to check your configuration. 
- - Try to check how the files are mapped in chrome dev tools and try to edit `sourceMapPathOverrides` accordingly to the path of your files. you will see a path like `webpack:///{something}`. You have to verify that `sourceMapPathOverrides` correctly maps the files you want to debug.
+ - Try to check how the files are mapped in chrome dev tools and try to edit `sourceMapPathOverrides` accordingly to the path of your files. you will see a path like `webpack:///{something}`. You have to verify that `sourceMapPathOverrides` correctly maps the files you want to debug.  ![debug](webpack-debug-3.jpg)
  - `devtool` configuration in webpack need to be have source maps. The simplest configuration of this kind is`'source-map'`. If your project is big, you may evaluate to use `'eval-source-map'`, `'inline-source-map'` or `'cheap-module-eval-source-map'` modes. This procedure has been tested with `source-maps` and `eval-source-map`.
  - Some webpack's versions seem to be affected by an issue with sourcemaps, at least using windows. You may need to add a configuration like this to work-around the problem: 
  ```
