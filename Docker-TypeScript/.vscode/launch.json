@@ -47,6 +47,9 @@
       "remoteRoot": "/server",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
+      ],
+      "skipFiles": [
+        "<node_internals>/**/*.js",
       ]
     },
     {
