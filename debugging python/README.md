@@ -86,7 +86,7 @@ This recipe shows how to debug a Python application using the VS Code extension 
     }   
     ```
     
-5. For basic Python debugging of files, you will only need the followinf configuration:
+5. For basic Python debugging of files, you will only need the following configuration:
     ```json
         {
     // Use IntelliSense to learn about possible attributes.
@@ -113,7 +113,7 @@ This recipe shows how to debug a Python application using the VS Code extension 
 
 ## Start Debugging.
   
-1. Open your Pythonn file in VS Code.
+1. Open your Python file in VS Code.
 
 2. Go to the Debug view, select the **Start Debugging** then press F5 or click the green play button.
 
