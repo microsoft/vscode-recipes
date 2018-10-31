@@ -1,7 +1,7 @@
 const { add } = require('../lib/calc');
 
 describe('When adding numbers', () => {
-  it('Shoud return correct result', () => {
+  it('Should return correct result', () => {
     const result = add(1, 2);
     expect(result).toEqual(3);
   });
