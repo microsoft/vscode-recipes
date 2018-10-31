@@ -28,6 +28,8 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging PHP with PHP Debug and XDebug](https://github.com/Microsoft/vscode-recipes/tree/master/PHP)
 
+- [Debugging Cake build scripts](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-cake-scripts)
+
 
 ## Container Technology
 
