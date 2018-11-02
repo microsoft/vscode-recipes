@@ -30,6 +30,8 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Cake build scripts](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-cake-scripts)
 
+- [Debugging Python](https://github.com/Microsoft/vscode-recipes/tree/master/debugging%20python)
+
 
 ## Container Technology
 
