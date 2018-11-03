@@ -7,18 +7,30 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/src/index.ts",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Launch in Docker",
       "preLaunchTask": "tsc-watch",
-      "protocol": "legacy",
+      "protocol": "auto",
       "runtimeExecutable": "npm",
       "runtimeArgs": [ "run", "docker-debug" ],
       "port": 5858,
       "restart": true,
       "timeout": 60000,
-      "localRoot": "${workspaceRoot}",
+      "localRoot": "${workspaceFolder}",
       "remoteRoot": "/server",
       "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
+        "${workspaceFolder}/dist/**/*.js"
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
@@ -28,13 +40,13 @@
       "request": "attach",
       "name": "Attach to Docker",
       "preLaunchTask": "tsc-watch",
-      "protocol": "legacy",
+      "protocol": "auto",
       "port": 5858,
       "restart": true,
-      "localRoot": "${workspaceRoot}",
+      "localRoot": "${workspaceFolder}",
       "remoteRoot": "/server",
       "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
+        "${workspaceFolder}/dist/**/*.js"
       ]
     },
     {
@@ -42,7 +54,7 @@
       "request": "launch",
       "name": "Local Nodemon",
       "preLaunchTask": "tsc-watch",
-      "protocol": "legacy",
+      "protocol": "auto",
       "runtimeExecutable": "npm",
       "runtimeArgs": [ "run", "debug" ],
       "restart": true,
@@ -50,7 +62,7 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "outFiles": [
-        "${workspaceRoot}/dist/**/*.js"
+        "${workspaceFolder}/dist/**/*.js"
       ]
     }
   ]
