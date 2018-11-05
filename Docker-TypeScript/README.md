@@ -180,6 +180,9 @@ For attaching the VS Code node debugger to the server running in the Docker cont
       "remoteRoot": "/server",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
+      ],
+      "skipFiles": [
+        "<node_internals>/**/*.js",
       ]
     }
   ]
@@ -221,6 +224,9 @@ Instead of launching Docker from the command line and then attaching the debugge
       "remoteRoot": "/server",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
+      ],
+      "skipFiles": [
+        "<node_internals>/**/*.js",
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
