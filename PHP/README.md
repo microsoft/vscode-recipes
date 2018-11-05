@@ -6,17 +6,17 @@ This recipe shows how to use the [PHP Debug](https://github.com/Microsoft/vscode
 
 ## Getting Started
 
-**Fistly we you gotta install [XDebug](https://xdebug.org).**
+**Firstly, you need to install [XDebug](https://xdebug.org).**
 
 ### Installing XDebug
 
-Let's to this by following the [PHP Debug](https://github.com/felixfbecker/vscode-php-debug) insctructions:
+Let's do this by following the [PHP Debug](https://github.com/felixfbecker/vscode-php-debug) instructions:
 
 > If you have `pecl` enabled, you can install XDebug via `pecl install xdebug` and jump to step 3.
 
 1. [Install XDebug](https://xdebug.org/docs/install)
     **_I highly recommend you make a simple `test.php` file, put a `phpinfo();` statement in there, then copy the output and paste it into the [XDebug installation wizard](https://xdebug.org/wizard.php). It will analyze it and give you tailored installation instructions for your environment._** In short:
-    - On Windows: [Download](https://xdebug.org/download.php) the appropiate precompiled DLL for your PHP version, architecture (64/32 Bit), thread safety (TS/NTS) and Visual Studio compiler version and place it in your PHP extension folder.
+    - On Windows: [Download](https://xdebug.org/download.php) the appropriate precompiled DLL for your PHP version, architecture (64/32 Bit), thread safety (TS/NTS) and Visual Studio compiler version and place it in your PHP extension folder.
     - On Linux: Either download the source code as a tarball or [clone it with git](https://xdebug.org/docs/install#source), then [compile it](https://xdebug.org/docs/install#compile).
 
 2. [Configure PHP to use XDebug](https://xdebug.org/docs/install#configure-php) by adding `zend_extension=path/to/xdebug` to your php.ini. The path of your php.ini is shown in your `phpinfo()` output under "Loaded Configuration File".
@@ -31,7 +31,7 @@ Let's to this by following the [PHP Debug](https://github.com/felixfbecker/vscod
 
     There are other ways to tell XDebug to connect to a remote debugger than `remote_autostart`, like cookies, query parameters or browser extensions. I recommend `remote_autostart` because it "just works". There are also a variety of other options, like the port (by default 9000), please see the [XDebug documentation on remote debugging](https://xdebug.org/docs/remote#starting) for more information.
 
-4. If you are doing web development, don't forget to restart your webserver to reload the settings.
+4. If you are doing web development, don't forget to restart your web server to reload the settings.
 
 5. Verify your installation by checking your `phpinfo()` output for an XDebug section.
 
@@ -65,7 +65,7 @@ echo 'Hello new world!';
 
 ## Start Debugging
 
-- Set a breakpoint in **index.php** on the line 3 (`echo`'s line).
+- Set a breakpoint in **index.php** on line 3 (`echo`'s line).
 
 - Launch a PHP server for the file.
 

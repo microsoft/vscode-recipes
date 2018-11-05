@@ -30,6 +30,10 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Gatsby.js build process](https://github.com/Microsoft/vscode-recipes/tree/master/Gatsby-js)
 
+- [Debugging Cake build scripts](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-cake-scripts)
+
+- [Debugging Python](https://github.com/Microsoft/vscode-recipes/tree/master/debugging%20python)
+
 ## Container Technology
 
 - [Debugging TypeScript in a Docker Container](https://github.com/weinand/vscode-recipes/tree/master/Docker-TypeScript)
