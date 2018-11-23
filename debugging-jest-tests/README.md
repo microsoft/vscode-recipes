@@ -29,6 +29,8 @@ To try the example you'll need to install dependencies by running:
       "name": "Jest All",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": ["--runInBand"],
+      //a way to run with config, arguments must be split
+      //"args": ["--runInBand", "--config", "test/unit/jest.config.js"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "windows": {
