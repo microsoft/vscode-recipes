@@ -48,8 +48,8 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
       {
         "name": "ng serve",
         "type": "chrome",
-        "preLaunchTask": "npm: start",
         "request": "launch",
+        "preLaunchTask": "npm: start",
         "url": "http://localhost:4200/#",
         "webRoot": "${workspaceFolder}"
       },
@@ -111,7 +111,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
               "regexp": "(.*?)"
             },
             "endsPattern": {
-              "regexp": "Compiled successfully. |Failed to compile."
+              "regexp": "Compiled |Failed to compile."
             }
           }
         }
