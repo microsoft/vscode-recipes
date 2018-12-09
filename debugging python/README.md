@@ -119,12 +119,10 @@ This recipe shows how to debug a Python application using the VS Code extension 
 
 2. Go to the Debug view, select the **Start Debugging** then press <kbd>F5</kbd> or click the green play button.
 
-3. VS Code should now show the rails server logs.
+3. Go ahead and set a breakpoint in any of the files by clicking on the space before the line number. A red dot should appear to show a breakpoint.
 
-4. Go ahead and set a breakpoint in any of the files by clicking on the space before the line number. A red dot should appear to show a breakpoint.
+4. Press <kbd>F5</kbd> to start debugging.
 
-5. Press <kbd>F5</kbd> to start debugging.
+5. Your breakpoint should now be hit.
 
-6. Your breakpoint should now be hit.
-
-7. To continue, press <kbd>F5</kbd> again, till you reach the end.
+6. To continue, press <kbd>F5</kbd> again, till you reach the end.
