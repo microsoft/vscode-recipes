@@ -57,7 +57,14 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         "type": "chrome",
         "request": "launch",
         "url": "http://localhost:9876/debug.html",
-        "webRoot": "${workspaceFolder}"
+        "webRoot": "${workspaceFolder}",
+        "sourceMaps": true,
+        "sourceMapPathOverrides": {
+          "/./*": "${webRoot}/*",
+          "/src/*": "${webRoot}/*",
+          "/*": "*",
+          "/./~/*": "${webRoot}/node_modules/*"
+        }
       },
       {
         "name": "ng e2e",
