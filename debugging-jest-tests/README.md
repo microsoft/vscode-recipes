@@ -31,6 +31,7 @@ To try the example you'll need to install dependencies by running:
       "args": ["--runInBand"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
       "windows": {
         "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       }
@@ -43,6 +44,7 @@ To try the example you'll need to install dependencies by running:
       "args": ["${relativeFile}"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
       "windows": {
         "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       }
@@ -71,11 +73,13 @@ To try the example you'll need to install dependencies by running:
 
 You can debug all tests by following the steps below:
 
-1. Set a breakpoint in a test file or files
+1. Set a breakpoint in a test file or files.
 
 2. Go to the Debug view, select the **'Jest All'** configuration, then press F5 or click the green play button.
 
-3. Your breakpoint will now be hit
+3. Your breakpoint will now be hit.
+
+> **Note**: Your breakpoint may not be hit on the first run. If it isn't hit, you can rerun the tests by pressing `a` at the prompt in the Terminal. Or, by adding a `debugger` statement to the top of the script (this just gives vscode time to process the script's sourcemaps when it is loaded).
 
 ![all](all.gif)
 
@@ -83,10 +87,10 @@ You can debug all tests by following the steps below:
 
 You can debug the test you're editing by following the steps below:
 
-1. Set a breakpoint in a test file
+1. Set a breakpoint in a test file.
 
 2. Go to the Debug view, select the **'Jest Current File'** configuration, then press F5 or click the green play button.
 
-3. Your breakpoint will now be hit
+3. Your breakpoint will now be hit. (If not, see **Note** above).
 
 ![current](current.gif)

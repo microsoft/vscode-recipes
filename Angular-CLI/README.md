@@ -43,12 +43,13 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
   ```json
   {
-    "version": "0.2.0",
+    "version": "2.0.0",
     "configurations": [
       {
         "name": "ng serve",
         "type": "chrome",
         "request": "launch",
+        "preLaunchTask": "npm: start",
         "url": "http://localhost:4200/#",
         "webRoot": "${workspaceFolder}"
       },
@@ -57,7 +58,14 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         "type": "chrome",
         "request": "launch",
         "url": "http://localhost:9876/debug.html",
-        "webRoot": "${workspaceFolder}"
+        "webRoot": "${workspaceFolder}",
+        "sourceMaps": true,
+        "sourceMapPathOverrides": {
+          "/./*": "${webRoot}/*",
+          "/src/*": "${webRoot}/*",
+          "/*": "*",
+          "/./~/*": "${webRoot}/node_modules/*"
+        }
       },
       {
         "name": "ng e2e",
@@ -73,16 +81,24 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
   - Since `ng serve` also compiles the Angular application it can be used as a build task if you prefer the "PROBLEMS" tab to `Ctrl + click` in the terminal (for smaller screens you could open the terminal only when the status bar shows there are problems).
   
-  Add the following `ng serve` task to your `tasks.json` file:
+  - The following `npm: start` task runs in the background, so we never expect it to fully complete. Instead we define a [problem matcher](https://code.visualstudio.com/docs/editor/tasks#_processing-task-output-with-problem-matchers), which alerts us that the task is ready.
+  
+  > **Please note**: Running `npm start` instead of `ng serve` ensures the app is served with the version of @angular/cli specified in package.json.
+  
+  Add the following `npm` task to your `tasks.json` file:
   
   ```json
   {
     "version": "2.0.0",
     "tasks": [
       {
-        "identifier": "ng serve",
         "type": "npm",
         "script": "start",
+        "isBackground": "true",
+        "presentation": {
+          "focus": true,
+          "panel": "dedicated"
+        },
         "group": {
           "kind": "build",
           "isDefault": true
@@ -99,7 +115,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
           "background": {
             "activeOnStart": true,
             "beginsPattern": {
-              "regexp": "Compiling...|TS\\d+:"
+              "regexp": "(.*?)"
             },
             "endsPattern": {
               "regexp": "Compiled |Failed to compile."
@@ -115,19 +131,9 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
 - Set a breakpoint in **app.component.ts** on the line that sets the `title` property of `AppComponent`.
 
-- Open a terminal at the root folder and serve the app using Angular CLI:
-
-  > **Please note**: Running `npm start` instead of `ng serve` ensures the app is served with the version of @angular/cli specified in package.json.
-
-  ```
-  npm start
-  ```
-
 - Go to the Debug view, select the **'ng serve'** configuration, then press F5 or click the green play button.
 
-- The app will be shown in a browser, but in order to hit the breakpoint you'll need to *refresh* the browser.
-
-![angular-breakpoint](https://user-images.githubusercontent.com/2836367/27004337-40bca8d8-4dcd-11e7-837e-b7602a3a622a.png)
+- A console window should appear where `ng serve` will run. Once the app is served, or if the task encounters an error, a browser window will appear. Use it to trigger your breakpoint!
 
 ## Debug Unit Tests
 
