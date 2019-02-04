@@ -41,7 +41,11 @@ To try the example you'll need to install dependencies by running:
       "request": "launch",
       "name": "Jest Current File",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "args": ["${relativeFile}"],
+      "args": [
+        "${relativeFile}",
+        "--config",
+        "jest.config.js"
+      ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
