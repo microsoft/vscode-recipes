@@ -32,7 +32,7 @@ Update your `package.json` section to:
 ```json
 "scripts": {
     "start": "meteor run",
-    "debug": "meteor run --inspect"
+    "debug": "meteor run --inspect-brk=9229"
 },
 ```
 
