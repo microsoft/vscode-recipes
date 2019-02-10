@@ -54,7 +54,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "request": "launch",
             "name": "Meteor: Chrome",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
             "outputCapture": "std"
         },
         {
@@ -63,7 +63,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "name": "Meteor: Node",
             "runtimeExecutable": "npm",
             "runtimeArgs": ["run", "debug"],
-            "outputCapture": "std"
+            "outputCapture": "std",
             "port": 9229,
             "timeout": 30000
         }
