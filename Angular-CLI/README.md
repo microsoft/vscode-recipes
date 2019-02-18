@@ -94,7 +94,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
       {
         "type": "npm",
         "script": "start",
-        "isBackground": "true",
+        "isBackground": true,
         "presentation": {
           "focus": true,
           "panel": "dedicated"
