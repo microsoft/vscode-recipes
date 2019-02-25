@@ -27,8 +27,8 @@
       "port": 5858,
       "restart": true,
       "timeout": 60000,
-      "localRoot": "${workspaceFolder}",
-      "remoteRoot": "/server",
+      "localRoot": "${workspaceFolder}/dist",
+      "remoteRoot": "/server/dist",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ],
@@ -43,8 +43,8 @@
       "protocol": "auto",
       "port": 5858,
       "restart": true,
-      "localRoot": "${workspaceFolder}",
-      "remoteRoot": "/server",
+      "localRoot": "${workspaceFolder}/dist",
+      "remoteRoot": "/server/dist",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ],
