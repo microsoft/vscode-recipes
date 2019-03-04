@@ -4,7 +4,7 @@
   "scripts": {
     "postinstall": "tsc -p ./src",
     "watch": "tsc -w -p ./src",
-    "debug": "nodemon --watch ./dist --inspect=0.0.0.0:5858 --nolazy ./dist/index.js",
+    "debug": "nodemon --legacy-watch --watch ./dist --inspect=0.0.0.0:5858 --nolazy ./dist/index.js",
     "docker-debug": "docker-compose up",
     "start": "node ./dist/index.js"
   },
