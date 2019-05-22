@@ -80,7 +80,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
       "webRoot": "${workspaceFolder}/src",
       "breakOnLoad": true,
       "sourceMapPathOverrides": {
-        "webpack:///./src/*": "${webRoot}/*"
+        "webpack:///src/*": "${webRoot}/*"
       }
     }
   ]
