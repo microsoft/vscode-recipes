@@ -61,6 +61,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         "webRoot": "${workspaceFolder}",
         "sourceMaps": true,
         "sourceMapPathOverrides": {
+          "webpack:/*": "${webRoot}/*",
           "/./*": "${webRoot}/*",
           "/src/*": "${webRoot}/*",
           "/*": "*",
