@@ -120,7 +120,7 @@ But for a faster edit/compile/debug cycle we will use a more sophisticated appro
 Let's start with the 'watch' task by creating a `tasks.json` inside the `.vscode` folder:
 ```json
 {
-   "version": "0.1.0",
+  "version": "0.1.0",
   "tasks": [
     {
       "taskName": "tsc-watch",
