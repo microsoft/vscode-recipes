@@ -120,17 +120,19 @@ But for a faster edit/compile/debug cycle we will use a more sophisticated appro
 Let's start with the 'watch' task by creating a `tasks.json` inside the `.vscode` folder:
 ```json
 {
-  "version": "0.1.0",
+  "version": "2.0.0",
   "tasks": [
     {
-      "taskName": "tsc-watch",
+      "label": "tsc-watch",
       "command": "npm",
       "args": [ "run", "watch" ],
-      "isShellCommand": true,
+      "type":"shell",
       "isBackground": true,
-      "isBuildCommand": true,
+      "group":"build",
       "problemMatcher": "$tsc-watch",
-      "showOutput": "always"
+      "presentation":{
+        "reveal": "always",
+      }
     }
   ]
 }
@@ -153,7 +155,7 @@ services:
       - ./dist:/server/dist
     ports:
       - "3000:3000"
-      - "9222:9222"
+      - "5858:5858"
 ```
 
 Here we mount the `dist` folder of the workspace into the Docker container (which hides whatever was in that location before). And we replace the `npm start` command from CMD in the Dockerfile by `npm run debug`. In the ports section we add a mapping for the node.js debug port.
@@ -174,10 +176,11 @@ For attaching the VS Code node debugger to the server running in the Docker cont
       "request": "attach",
       "name": "Attach to Docker",
       "preLaunchTask": "tsc-watch",
-      "port": 9222,
+      "protocol":"auto",
+      "port": 5858,
       "restart": true,
-      "localRoot": "${workspaceFolder}",
-      "remoteRoot": "/server",
+      "localRoot": "${workspaceFolder}/dist",
+      "remoteRoot": "/server/dist",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ],
@@ -198,7 +201,7 @@ After running "Attach to Docker" you can debug the server in TypeScript source:
 
 > **Please note**: when using Docker on Windows, modifying the source does not make nodemon restart node.js. On Windows nodemon cannot pick-up file changes from the mounted `dist` folder because of this [issue](https://github.com/docker/for-win/issues/56). The workaround is to add the `--legacy-watch` flag to nodemon in the `debug` npm script:
 ```json
-"debug": "nodemon --legacy-watch --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/index.js",
+"debug": "nodemon --legacy-watch --watch ./dist --inspect=0.0.0.0:5858 --nolazy ./dist/index.js",
 ```
 
 ## Further Simplifying the Debugging Setup
@@ -217,10 +220,10 @@ Instead of launching Docker from the command line and then attaching the debugge
       "preLaunchTask": "tsc-watch",
       "runtimeExecutable": "npm",
       "runtimeArgs": [ "run", "docker-debug" ],
-      "port": 9222,
+      "port": 5858,
       "restart": true,
       "timeout": 60000,
-      "localRoot": "${workspaceFolder}",
+      "localRoot": "${workspaceFolder}/dist",
       "remoteRoot": "/server",
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
