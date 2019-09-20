@@ -20,6 +20,7 @@
       "name": "Jest Current File",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
+        "--runTestsByPath",
         "${relativeFile}",
         "--config",
         "jest.config.js"
