@@ -113,7 +113,7 @@ docker run -p 3000:3000 server
 
 ## Debugging in Docker
 
-For debugging this server in the Docker container we could just make node's debug port 9222 available (via the '-p' flag from above) and attach VS Code to this.
+For debugging this server in the Docker container we could just make node's debug port 5858 (i.e. the same port we specified for nodemon's "--inspect" option in the package.json file above) available via the '-p' flag from above and attach VS Code to this.
 
 But for a faster edit/compile/debug cycle we will use a more sophisticated approach by mounting the 'dist' folder of the VS Code workspace directly into the container running in Docker. Inside Docker we'll use 'nodemon' for tracking changes in the 'dist' folder and restart the node runtime automatically and in the VS Code workspace we'll use a watch task that automatically transpiles modified TypeScript source into the 'dist' folder.
 
