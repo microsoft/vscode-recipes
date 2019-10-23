@@ -60,7 +60,7 @@ Add this `package.json` which lists the dependencies and defines some scripts fo
   "scripts": {
     "postinstall": "tsc -p ./src",
     "watch": "tsc -w -p ./src",
-    "debug": "nodemon --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/index.js",
+    "debug": "nodemon --watch ./dist --inspect=0.0.0.0:5858 --nolazy ./dist/index.js",
     "docker-debug": "docker-compose up",
     "start": "node ./dist/index.js"
   },
