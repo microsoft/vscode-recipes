@@ -51,10 +51,10 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "type": "node",
             "request": "launch",
             "name": "Next: Node",
-            "runtimeExecutable": "next",
-            "runtimeArgs": [
-                "--inspect"
-            ],
+            "env": {
+                "NODE_OPTIONS": "--inspect"
+            },
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/next",
             "port": 9229,
             "console": "integratedTerminal"
         }
@@ -66,7 +66,10 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         }
     ]
 }
-  ```
+```
+
+`"runtimeExecutable": "${workspaceFolder}/node_modules/.bin/next",` - path to "nextjs" in dependencies (locally for project)  
+`"runtimeExecutable": "next",` - if nextjs is installed globally
 
   ## Debugging of the Node process
 
