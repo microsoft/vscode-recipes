@@ -88,6 +88,45 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 }
 ```
 
+## Serve & Debug at once
+
+1. Create a task in `tasks.json` as below:
+
+```js
+{
+        "label": "serve",
+        "type": "npm",
+        "script": "serve",
+        "isBackground": true,
+        "problemMatcher": [{
+            "base": "$tsc-watch",
+            "background": {
+                "activeOnStart": true,
+                "beginsPattern": "Starting development server",
+                "endsPattern": "Compiled successfully"
+            }
+        }],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }
+```
+
+2. Amend the `launch.json` accordingly
+
+```js
+...
+"name": "vuejs: chrome",
+"url": "http://localhost:8080",
+"webRoot": "${workspaceFolder}/src",
+"breakOnLoad": true,
+"preLaunchTask": "serve",
+...
+```
+
+The debugger will now run the `serve` task and upon successful compilation, open Chrome with the debugger.
+
 ## Start Debugging
 
 1. Set a breakpoint in **src/components/HelloWorld.vue** on `line 90` where the `data` function returns a string.
