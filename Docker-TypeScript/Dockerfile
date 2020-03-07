@@ -1,4 +1,4 @@
-FROM node:7.4.0-slim
+FROM node:8-slim
 
 WORKDIR /server
 
