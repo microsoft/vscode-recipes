@@ -10,7 +10,7 @@ This guide will use the [Cake example project](https://github.com/cake-build/exa
 
 Make sure you have the following already in place:
 
-- The latest version of the [C# for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) extension installed in VS Code.
+- The latest version of the [C# for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) extension installed in VS Code.
 
 - Also make sure you have the latest version of the [Cake for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=cake-build.cake-vscode) extension installed.
 

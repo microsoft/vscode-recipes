@@ -10,7 +10,7 @@ This recipe shows how to use both the [Debugger for Chrome](https://github.com/M
 
 - Version **3.5.0** or greater of the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed in VS Code.
 
-- Version **1.13.1** of the [C# for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) extension installed in VS Code.
+- Version **1.13.1** of the [C# for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) extension installed in VS Code.
 
 - .NET Core SDK 1.0 RC4 (or later) for Windows, Mac, or Linux
 
@@ -31,7 +31,7 @@ This recipe shows how to use both the [Debugger for Chrome](https://github.com/M
     ```
     mkdir my-app
     cd my-app
-    dotnet new amgular
+    dotnet new angular
     ```
 
 - Restore dependencies
