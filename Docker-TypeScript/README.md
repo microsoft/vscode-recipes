@@ -2,7 +2,7 @@
 
 **Please note:**  this recipe is obsolete. It was created in a time when VS Code did not have universal [remote development capabilities](https://code.visualstudio.com/docs/remote/remote-overview) and only its Node.js debugger was able to debug remotely.
 Today we recommend to use VS Code's excellent [container development support](https://code.visualstudio.com/docs/remote/containers).
-AdWith this TypeScript development in a Docker container is not different than TypeScript development in a local setup.
+With this, TypeScript development in a Docker container is not different than TypeScript development in a local setup.
 
 ---
 
