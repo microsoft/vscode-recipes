@@ -14,59 +14,51 @@ If you're using Vue.js through the Nuxt.js framework, see https://codeburst.io/d
 
 3. Use [NPM](https://www.npmjs.com) to install [vue-cli](https://github.com/vuejs/vue-cli)
 
-    ```
-    npm install -g vue-cli
-    ```
+   ```
+   npm install -g @vue/cli
+   ```
 
 4. Use Vue CLI to create a new Vue.js app.
 
-    ```
-    vue init webpack vuejs-webpack-project
-    ```
+   ```
+   vue create hello-world
+   ```
+
+   You will be prompted to pick a preset. You can either choose the default preset which comes with a basic Babel + ESLint setup,or select "Manually select features" to pick the features you need.
 
 5. Change to the newly created application directory and open VS Code.
 
-    ```
-    cd vuejs-webpack-project
-    code .
-    ```
+   ```
+   cd hello-world
+   code .
+   ```
 
 ## Update your webpack configuration
 
 Before you can debug your Vue components from VS Code you need to update the generated webpack config to build sourcemaps that contains more information for our debugger.
 
-### Vue CLI 2.X
-
-- Go to `config/index.js` and find the `devtool` property. Update it to:
-
-```json
-devtool: 'source-map',
-```
-
-Make sure you updated both your **`build`** and **`dev`** configuration!
-
-### Vue CLI 3.X
+### Vue CLI 3.X and above
 
 - The `devtool` property needs to be set inside `vue.config.js`. Create the file in your project's root directory if it doesn't already exist.
 
 ```js
 module.exports = {
   configureWebpack: {
-    devtool: 'source-map'
+    devtool: "source-map"
   }
-}
+};
 ```
 
 ## Configure launch.json File
 
 1. Click on the Debugging icon in the Activity Bar to bring up the Debug view.
-Then click on the gear icon to configure a launch.json file, selecting **Chrome** for the environment:
+   Then click on the gear icon to configure a launch.json file, selecting **Chrome** for the environment:
 
    ![config_add](config_add.png)
 
-2. Update the generated `launch.json`'s `configurations` to include the "vuejs: chrome" configuration as seen below:
+2. Replace content of the generated launch.json with the following configurations:
 
-```js
+```json
 {
   "version": "0.2.0",
   "configurations": [
@@ -75,18 +67,53 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
       "request": "launch",
       "name": "vuejs: chrome",
       "url": "http://localhost:8080",
-      "webRoot": "${workspaceFolder}/src",
+      "webRoot": "${workspaceFolder}",
       "breakOnLoad": true,
+      "pathMapping": {
+        "/_karma_webpack_": "${workspaceFolder}"
+      },
       "sourceMapPathOverrides": {
-        "webpack:///./src/*": "${webRoot}/*",
-        "webpack:///src/*": "${webRoot}/*",
-        "webpack:///*": "*",
-        "webpack:///./~/*": "${webRoot}/node_modules/*"
-      }
+        "webpack:/*": "${webRoot}/*",
+        "/./*": "${webRoot}/*",
+        "/src/*": "${webRoot}/*",
+        "/*": "*",
+        "/./~/*": "${webRoot}/node_modules/*"
+      },
+      "preLaunchTask": "vuejs: start"
     }
   ]
 }
 ```
+
+Add the following `npm` task to your `tasks.json` file:
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "vuejs: start",
+      "type": "npm",
+      "script": "serve",
+      "isBackground": true
+    }
+  ]
+}
+```
+
+## Start Debugging
+
+1. Set a breakpoint anywhere in **src/components/HelloWorld.vue**
+
+2. Go to the Debug view, select the **'vuejs: chrome'** configuration, then press F5 or click the green play button.
+
+3. Your breakpoint should now be hit as the new instance of Chrome opens `http://localhost:8080`.
+
+![breakpoint-renderer](breakpoint_hit.png)
+
+4. Party 🎉🔥
+
+- Other Devtools for Vue also exist in Firefox and Chrome. [Devtools](https://vuejs.org/v2/cookbook/debugging-in-vscode.html)
 
 ## Serve & Debug at once
 
@@ -126,23 +153,3 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 ```
 
 The debugger will now run the `serve` task and upon successful compilation, open Chrome with the debugger.
-
-## Start Debugging
-
-1. Set a breakpoint in **src/components/HelloWorld.vue** on `line 90` where the `data` function returns a string.
-
-![breakpoint-renderer](breakpoint_set.png)
-
-2. Open your favorite terminal at the root folder and serve the app using Vue CLI:
-
-  ```
-  npm start
-  ```
-
-3. Go to the Debug view, select the **'vuejs: chrome'** configuration, then press F5 or click the green play button.
-
-4. Your breakpoint should now be hit as the new instance of Chrome opens `http://localhost:8080`.
-
-![breakpoint-renderer](breakpoint_hit.png)
-
-5. Party 🎉🔥
