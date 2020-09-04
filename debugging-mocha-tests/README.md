@@ -35,7 +35,10 @@ To try the example you'll need to install dependencies by running:
             "${workspaceFolder}/test"
         ],
         "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen"
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": [
+            "<node_internals>/**/*.js"
+        ]
     },
     {
         "type": "node",
@@ -49,7 +52,10 @@ To try the example you'll need to install dependencies by running:
             "${file}"
         ],
         "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen"
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": [
+            "<node_internals>/**/*.js"
+        ]
     }
   ]
 }
@@ -73,7 +79,10 @@ If you don't have all of your tests under a common "test" directory, then the fo
             "'${workspaceFolder}/{,!(node_modules)/}*/*.test.js'"
         ],
         "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen"
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": [
+            "<node_internals>/**/*.js"
+        ]
     },
     {
         "type": "node",
@@ -87,7 +96,10 @@ If you don't have all of your tests under a common "test" directory, then the fo
             "${file}"
         ],
         "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen"
+        "internalConsoleOptions": "neverOpen",
+        "skipFiles": [
+            "<node_internals>/**/*.js"
+        ]
     }
   ]
 }
@@ -120,7 +132,10 @@ Reference the mocha opts file with --opts in configuration as shown below
                 "${workspaceFolder}/test"
             ],
             "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": [
+                "<node_internals>/**/*.js"
+            ]
         }
     ]
 }
