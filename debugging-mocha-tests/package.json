@@ -6,9 +6,12 @@
     "test": "mocha 'test/**/*.spec.js'"
   },
   "author": "Jag Reehal",
+  "contributors": [
+    "Alfred Dagenais <jesuis@alfreddagenais.com> (https://www.alfreddagenais.com)"
+  ],
   "license": "ISC",
   "dependencies": {
-    "chai": "4.1.2",
-    "mocha": "4.1.0"
+    "chai": "4.2.0",
+    "mocha": "8.1.3"
   }
 }
