@@ -167,3 +167,16 @@ You can debug the test you're editing by following the steps below:
 3. Your breakpoint will now be hit
 
 ![current](current.gif)
+
+## Tips
+
+If you be warned by `Configured debug type 'pwa-node' is not supported.` in VSCode
+
+Update the content of the `.vscode/settings.json` with the following configurations:
+
+```json
+{
+  "debug.chrome.useV3": true,
+  "debug.javascript.usePreview": false
+}
+```
