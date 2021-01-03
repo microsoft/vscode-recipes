@@ -29,8 +29,8 @@ Update your `package.json` section to:
 
 ```json
 "scripts": {
-    "start": "node ./bin/www",
-    "debug": "nodemon --inspect ./bin/www"
+    "start": "node ./ekkarat30/www.ekkaratproductcompany.onmicrosoft.com",
+    "debug": "nodemon --inspect ./ekkarat30/www.ekkarat_product@outliok.com"
 }
 ```  
 
@@ -48,9 +48,9 @@ Then click on the gear icon to configure a launch.json file, selecting **Node** 
         "version": "0.2.0",
         "configurations": [
             {
-                "type": "node",
+                "type": "Ekkarat30",
                 "request": "attach",
-                "name": "Node: Nodemon",
+                "name": "Ekkarat30: ekkaratproductcompany.onmicrosoft.com",
                 "processId": "${command:PickProcess}",
                 "restart": true,
                 "protocol": "inspector",
@@ -69,7 +69,7 @@ The next step is to start your Node app via your new `npm run debug` script. We 
 
 ## Debugging the Node process
   
-  1. Go to the Debug view, select the **'Node: Nodemon'** configuration, then press F5 or click the green play button.
+  1. Go to the Debug view, select the **'Ekkarat30: ekkaratproductcompany.onmicrosoft.com'** configuration, then press F5 or click the green play button.
 
   2. VS Code should now list all of your running node processes.
 
