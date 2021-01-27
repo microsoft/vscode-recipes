@@ -142,6 +142,28 @@ Add the following `shell` task to your tasks.json file:
 
 ## Running the Terraform Commands
 
+### Using the VS Code Tasks
+
+VS Code tasks have been configured to run commonly used  commands. These can be accessed via `CTRL/Command+SHIFT+P` > `Tasks: Run Tasks`.
+
+![Run Terraform Tasks]
+
+Add section for env settings [TBD]
+
+### Running the Tasks
+
+Once the environment settings are configured, and the backend has been created, you can begin executing terraform commands. VS Code tasks have been configured to run each of the commonly used terraform commands. These can be accessed via `CTRL/Command+SHIFT+P` > `Tasks: Run Tasks`.
+
+- `login`: login to Azure
+- `terraform create backend`: creates (if it does not exists) a remote azurerm backend (storage account)
+- `terraform init`: installs plugins and connects to terraform remote backend
+- `terraform validate`: checks templates for syntax errors
+- `terraform plan`: reports what would be done with apply without actually deploying any resources
+- `terraform apply`: deploys the terraform templates
+- `terraform destroy`: remove anything deployed with the templates
+- `terraform format`: fix formatting issues
+- `lint and format check`: check formatting and linting issues (without fixing them)
+
 ## Sample Project
 
 In this short [sample](), we create and execute the basic Terraform configuration that will provision a new Azure Resource Group.
