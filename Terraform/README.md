@@ -146,7 +146,7 @@ Add the following `shell` task to your tasks.json file:
 
 VS Code tasks have been configured to run commonly used  commands. These can be accessed via `CTRL/Command+SHIFT+P` > `Tasks: Run Tasks`.
 
-![Run Terraform Tasks]
+![Run Terraform Tasks](assets/Terraform_tasks.png)
 
 Add section for env settings [TBD]
 
