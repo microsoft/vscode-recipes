@@ -22,14 +22,20 @@ Add/Update your vscode settings.json with:
 {
     "terraform": {
         "azurerm": {
-            "tenant_id": "", // your target tenant id 
-            "subscription_id": "", // your target subscription id
+            // your target tenant id 
+            "tenant_id": "",
+            // your target subscription id
+            "subscription_id": "",
             "location": "eastus",
             "backend": {
-                "storage_account": "sttrfrmrecipe", // name of the Storage Account
-                "resource_group": "rg-trfrm-recipe", // name of the resource group where the Storage Account should be created
-                "container": "infrax", // name of the Blob Container within the Blob Storage Account
-                "key": "infrax.tfstate" // name of the Blob used to retrieve/store Terraform's State file
+                // name of the Storage Account
+                "storage_account": "sttrfrmrecipe",
+                // name of the resource group where the Storage Account should be created
+                "resource_group": "rg-trfrm-recipe",
+                // name of the Blob Container within the Blob Storage Account
+                "container": "infrax",
+                // name of the Blob used to retrieve/store Terraform's State file
+                "key": "infrax.tfstate"
             }
         }
     }
@@ -184,7 +190,7 @@ Once the environment settings are configured, and the backend has been created, 
 - `terraform apply`: deploys the terraform templates
 - `terraform destroy`: remove anything deployed with the templates
 
-## Sample Project
+## Sample Template
 
 In this sample [template](templates/main.tf), we create and execute the basic Terraform configuration that will provision a new Azure Resource Group.
 
