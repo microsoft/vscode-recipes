@@ -26,10 +26,10 @@ Add/Update your vscode settings.json with:
             "subscription_id" : "", // your target subscription id
             "location" : "eastus",
             "backend" : {            
-                "storage_account" : "sttrfrmrecipe",
-                "resource_group" : "rg-trfrm-recipe",
-                "container" : "infrax",
-                "key" : "infrax.tfstate"
+                "storage_account" : "sttrfrmrecipe", // name of the Storage Account
+                "resource_group" : "rg-trfrm-recipe", // name of the resource group where the Storage Account should be created
+                "container" : "infrax", // name of the Blob Container within the Blob Storage Account
+                "key" : "infrax.tfstate" // name of the Blob used to retrieve/store Terraform's State file
             }
         }
     }
@@ -168,7 +168,7 @@ VS Code tasks have been configured to run commonly used  commands. These can be 
 
 ![Run Terraform Tasks](assets/Terraform_tasks.png)
 
-Add section for env settings [TBD]
+Once the settings are configured, you can begin executing terraform commands.
 
 ### Running the Tasks
 
@@ -186,7 +186,7 @@ Once the environment settings are configured, and the backend has been created, 
 
 ## Sample Project
 
-In this short [sample](), we create and execute the basic Terraform configuration that will provision a new Azure Resource Group.
+In this sample [template](templates/main.tf), we create and execute the basic Terraform configuration that will provision a new Azure Resource Group.
 
 ## Additional References
 
