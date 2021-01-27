@@ -36,6 +36,19 @@ Add/Update your vscode settings.json with:
 }
 ```
 
+The following values will need to be updated from the configuration:
+
+- `tenant_id`: Azure tenant ID
+- `subscription_id`: Azure subscription ID
+
+The following values can be renamed from the above configuration:
+
+- `location`: Location where the resource should be created
+- `storage_account`: Name of the Storage Account
+- `resource_group`: Name of the resource group where the Storage Account should be created
+- `container`: Name of the Blob Container within the Blob Storage Account
+- `key`: Name of the Blob used to retrieve/store Terraform's State file
+
 Add the following `shell` task to your tasks.json file:
 
 ```json
