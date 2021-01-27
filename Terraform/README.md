@@ -22,19 +22,13 @@ Add/Update your vscode settings.json with:
 {
     "terraform": {
         "azurerm": {
-            // your target tenant id 
             "tenant_id": "",
-            // your target subscription id
             "subscription_id": "",
             "location": "eastus",
             "backend": {
-                // name of the Storage Account
                 "storage_account": "sttrfrmrecipe",
-                // name of the resource group where the Storage Account should be created
                 "resource_group": "rg-trfrm-recipe",
-                // name of the Blob Container within the Blob Storage Account
                 "container": "infrax",
-                // name of the Blob used to retrieve/store Terraform's State file
                 "key": "infrax.tfstate"
             }
         }
