@@ -1,8 +1,5 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
-    // ensures that windows machines execute tasks on cmd even if git bash or wsl bash is set as default shell
     "windows": {
         "options": {
             "shell": {
@@ -61,7 +58,7 @@
             ]
         },
         {
-            "label": "terraform format",
+            "label": "terraform fmt",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}/templates"
@@ -74,7 +71,7 @@
             ]   
         },
         {
-            "label": "terraform lint",
+            "label": "tflint",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}/templates"
