@@ -13,20 +13,22 @@
     },
     "tasks": [
         {
-            "label": "login",
+            "label": "az login",
             "type": "shell",
-            "linux": {
-                "command": "az login && az account set -s $ARM_SUBSCRIPTION_ID"
-            },
+            "command": "az login && az account set -s ${config:terraform.azurerm.subscription_id}",
             "problemMatcher": []
         },
         {
             "label": "terraform create backend",
             "type": "shell",
-            "linux": {
-                "command": "${workspaceFolder}/create-backend.sh"
-            },
-            "problemMatcher": []
+            "command": "${workspaceFolder}/create-backend.sh",
+            "problemMatcher": [],
+            "args": [
+                "${config:terraform.azurerm.backend.resource_group}",
+                "${config:terraform.azurerm.backend.storage_account}",
+                "${config:terraform.azurerm.backend.container}",
+                "${config:terraform.azurerm.location}"
+            ]
         },
         {
             "label": "terraform init",
@@ -35,12 +37,12 @@
             "problemMatcher": [],
             "args": [
                 "init",
-                "-backend-config=\"storage_account_name=${env:TF_BACKEND_STORAGE_ACCOUNT}\"",
-                "-backend-config=\"container_name=${env:TF_BACKEND_CONTAINER}\"",
-                "-backend-config=\"key=${env:TF_BACKEND_KEY}\"",
-                "-backend-config=\"resource_group_name=${env:TF_BACKEND_RESOURCE_GROUP}\"",                              
-                "-backend-config=\"subscription_id=${env:ARM_SUBSCRIPTION_ID}\"",
-                "-backend-config=\"tenant_id=${env:ARM_TENANT_ID}\"",
+                "-backend-config=\"resource_group_name=${config:terraform.azurerm.backend.resource_group}\"",   
+                "-backend-config=\"storage_account_name=${config:terraform.azurerm.backend.storage_account}\"",
+                "-backend-config=\"container_name=${config:terraform.azurerm.backend.container}\"",
+                "-backend-config=\"key=${config:terraform.azurerm.backend.key}\"",                           
+                "-backend-config=\"subscription_id=${config:terraform.azurerm.subscription_id}\"",
+                "-backend-config=\"tenant_id=${config:terraform.azurerm.tenant_id}\"",
             ],
             "options": {
                 "cwd": "${workspaceFolder}/templates"
@@ -77,7 +79,7 @@
             "options": {
                 "cwd": "${workspaceFolder}/templates"
             },
-            "command": "tflint --module",
+            "command": "tflint",
             "problemMatcher": []
         },
         {
