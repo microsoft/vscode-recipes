@@ -14,7 +14,7 @@
 
 ## Configuring the Terraform Tasks
 
-The tasks below are based on Microsoft Azure as the cloud provider but other cloud provides such as AWS and Google Cloud are also supported with Terraform.
+The tasks below are based on Microsoft Azure as the cloud provider but other cloud providers such as AWS and Google Cloud are also supported with Terraform.
 
 Add/Update your vscode settings.json with:
 
@@ -43,6 +43,7 @@ The following values will need to be updated from the configuration:
 
 - `tenant_id`: Azure tenant ID
 - `subscription_id`: Azure subscription ID
+  > Ensure you have permissions to create resources in this subscription.
 
 The following values can be renamed from the above configuration:
 
