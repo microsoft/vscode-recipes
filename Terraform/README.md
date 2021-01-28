@@ -32,6 +32,9 @@ Add/Update your vscode settings.json with:
                 "key": "infrax.tfstate"
             }
         }
+    },
+    "sample": {
+        "rg_name": "rg-sample"
     }
 }
 ```
@@ -48,6 +51,7 @@ The following values can be renamed from the above configuration:
 - `resource_group`: Name of the resource group where the Storage Account should be created
 - `container`: Name of the Blob Container within the Blob Storage Account
 - `key`: Name of the Blob used to retrieve/store Terraform's State file
+- `rg_name`: Name of the resource group to be provisioned
 
 Add the following `shell` task to your tasks.json file:
 
@@ -148,7 +152,8 @@ Add the following `shell` task to your tasks.json file:
             "command": "terraform",
             "problemMatcher": [],
             "args": [
-                "plan"
+                "plan",
+                "-var=rg_name=${config:sample.rg_name}"
             ]
         },
         {
@@ -160,7 +165,8 @@ Add the following `shell` task to your tasks.json file:
             "command": "terraform",
             "problemMatcher": [],
             "args": [
-                "apply"
+                "apply",
+                "-var=rg_name=${config:sample.rg_name}"
             ]
         },
         {
@@ -172,7 +178,8 @@ Add the following `shell` task to your tasks.json file:
             "command": "terraform",
             "problemMatcher": [],
             "args": [
-                "destroy"
+                "destroy",
+                "-var=rg_name=${config:sample.rg_name}"
             ]
         },
     ]
