@@ -72,6 +72,12 @@ Add the following `shell` task to your tasks.json file:
         {
             "label": "terraform create backend",
             "type": "shell",
+            "windows": {
+                "command": "${workspaceFolder}/create-backend.bat"
+            },
+            "linux": {
+                "command": "${workspaceFolder}/create-backend.sh"
+            },
             "command": "${workspaceFolder}/create-backend.sh",
             "problemMatcher": [],
             "args": [
