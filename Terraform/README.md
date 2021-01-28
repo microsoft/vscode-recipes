@@ -20,21 +20,34 @@ Add/Update your vscode settings.json with:
 
 ```json
 {
-    "terraform" : {
-        "azurerm" : {
-            "tenant_id" : "", // your target tenant id 
-            "subscription_id" : "", // your target subscription id
-            "location" : "eastus",
-            "backend" : {            
-                "storage_account" : "sttrfrmrecipe",
-                "resource_group" : "rg-trfrm-recipe",
-                "container" : "infrax",
-                "key" : "infrax.tfstate"
-            }
-        }
-    }
+    "terraform": {
+        "azurerm": {
+            "tenant_id": "",
+            "subscription_id": "",
+            "location": "eastus",
+            "backend": {
+                "storage_account": "sttrfrmrecipe",
+                "resource_group": "rg-trfrm-recipe",
+                "container": "infrax",
+                "key": "infrax.tfstate"
+            }
+        }
+    }
 }
 ```
+
+The following values will need to be updated from the configuration:
+
+- `tenant_id`: Azure tenant ID
+- `subscription_id`: Azure subscription ID
+
+The following values can be renamed from the above configuration:
+
+- `location`: Location where the resource should be created
+- `storage_account`: Name of the Storage Account
+- `resource_group`: Name of the resource group where the Storage Account should be created
+- `container`: Name of the Blob Container within the Blob Storage Account
+- `key`: Name of the Blob used to retrieve/store Terraform's State file
 
 Add the following `shell` task to your tasks.json file:
 
@@ -168,7 +181,7 @@ VS Code tasks have been configured to run commonly used  commands. These can be 
 
 ![Run Terraform Tasks](assets/Terraform_tasks.png)
 
-Add section for env settings [TBD]
+Once the settings are configured, you can begin executing terraform commands.
 
 ### Running the Tasks
 
@@ -184,9 +197,9 @@ Once the environment settings are configured, and the backend has been created, 
 - `terraform apply`: deploys the terraform templates
 - `terraform destroy`: remove anything deployed with the templates
 
-## Sample Project
+## Sample Template
 
-In this short [sample](), we create and execute the basic Terraform configuration that will provision a new Azure Resource Group.
+In this sample [template](templates/main.tf), we create and execute the basic Terraform configuration that will provision a new Azure Resource Group.
 
 ## Additional References
 

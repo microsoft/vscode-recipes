@@ -1,15 +1,15 @@
 {
-    "terraform" : {
-        "azurerm" : {
-            "tenant_id" : "", // your target tenant id 
-            "subscription_id" : "", // your target subscription id
-            "location" : "eastus",
-            "backend" : {            
-                "storage_account" : "sttrfrmrecipe",
-                "resource_group" : "rg-trfrm-recipe",
-                "container" : "infrax",
-                "key" : "infrax.tfstate"
-            }
-        }
-    }
+    "terraform": {
+        "azurerm": {
+            "tenant_id": "",
+            "subscription_id": "",
+            "location": "eastus",
+            "backend": {
+                "storage_account": "sttrfrmrecipe",
+                "resource_group": "rg-trfrm-recipe",
+                "container": "infrax",
+                "key": "infrax.tfstate"
+            }
+        }
+    }
 }
