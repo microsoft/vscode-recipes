@@ -64,7 +64,7 @@
             ]
         },
         {
-            "label": "terraform fmt",
+            "label": "terraform format",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}/templates"
@@ -77,7 +77,7 @@
             ]   
         },
         {
-            "label": "tflint",
+            "label": "terraform lint",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}/templates"
