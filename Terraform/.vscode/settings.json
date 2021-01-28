@@ -11,5 +11,8 @@
                 "key": "infrax.tfstate"
             }
         }
+    },
+    "sample": {
+        "rg_name": "rg-sample"
     }
 }

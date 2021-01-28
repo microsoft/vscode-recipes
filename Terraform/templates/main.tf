@@ -7,6 +7,6 @@ terraform {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-sample"
+  name     = var.rg_name
   location = "eastus"
 }

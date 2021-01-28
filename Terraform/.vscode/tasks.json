@@ -94,7 +94,8 @@
             "command": "terraform",
             "problemMatcher": [],
             "args": [
-                "plan"
+                "plan",
+                "-var=rg_name=${config:sample.rg_name}"
             ]
         },
         {
@@ -106,7 +107,8 @@
             "command": "terraform",
             "problemMatcher": [],
             "args": [
-                "apply"
+                "apply",
+                "-var=rg_name=${config:sample.rg_name}"
             ]
         },
         {
@@ -118,7 +120,8 @@
             "command": "terraform",
             "problemMatcher": [],
             "args": [
-                "destroy"
+                "destroy",
+                "-var=rg_name=${config:sample.rg_name}"
             ]
         },
     ]
