@@ -1,4 +1,4 @@
-# Running Terraform in VS Code
+# Running Terraform tasks in VS Code
 
 [Terraform](https://www.terraform.io/) is an open-source tool that provides the ability to build, change, and version infrastructure as code using declarative configuration files with HashiCorp Configuration Language (HCL). This recipe shows how to successfully run Terraform with minimal setup with VS Code.
 
@@ -10,7 +10,7 @@
 
 - [Terraform Extension](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform): The HashiCorp Terraform VS Code extension adds syntax highlighting and other editing features for Terraform files using the Terraform Language Server.
 
-- [Terraform Linter](https://github.com/terraform-linters/tflint)
+- [Terraform Linter](https://github.com/terraform-linters/tflint): Install latest version of tflint.
 
 ## Configuring the Terraform Tasks
 
@@ -219,3 +219,9 @@ In this sample [template](templates/main.tf), we create and execute the basic Te
 
 - [Terraform Overview](https://www.terraform.io/intro/index.html)
 - [Terraform Tutorials](https://learn.hashicorp.com/terraform?utm_source=terraform_io)
+
+## Contributors
+
+- [Charles Zipp](https://github.com/charleszipp)
+- [Tas Devani](https://github.com/tasdevani21)
+- [Lila Molyva](https://github.com/norelina)
