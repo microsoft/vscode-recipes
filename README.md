@@ -48,4 +48,4 @@ A collection of recipes for using VS Code with particular technologies.
 
 ## AWS Lambda
 
-- [Debugging Lambda functions](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-lambda-functions)
+- [Debugging Lambda functions](https://github.com/Microsoft/vscode-recipes/tree/main/debugging-lambda-functions)
