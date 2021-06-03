@@ -45,3 +45,7 @@ A collection of recipes for using VS Code with particular technologies.
 ## Emscripten
 
 - [Debug Emscripten translated C/C++](https://github.com/weinand/vscode-recipes/issues/20)
+
+## AWS Lambda
+
+- [Debugging Lambda functions](https://github.com/Microsoft/vscode-recipes/tree/master/debugging-lambda-functions)
