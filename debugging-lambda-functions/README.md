@@ -32,8 +32,9 @@ This guide will help you configure VS Code to support setting breakpoints and de
          "name": "Debug SST Start",
          "type": "node",
          "request": "launch",
-         "runtimeExecutable": "npm",
-         "runtimeArgs": ["start"],
+         "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/sst",
+         "runtimeArgs": ["start", "--increase-timeout"],
+         "console": "integratedTerminal",
          "skipFiles": ["<node_internals>/**"]
        },
        {
