@@ -14,18 +14,17 @@ Next.js allows ReactJS to be used both on the server and client, which is a grea
 
 2. Make sure to the latest version of [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed in VS Code.
 
-3. This guide assumes that you are using the official sample app [nextgram](https://github.com/zeit/nextgram). Clone the repo to get started:
+3. This guide assumes that you are using the official [create-next-app](https://github.com/vercel/next.js). To create a project, run:
     >
     ```
-    git clone git@github.com:now-examples/nextgram.git
-    cd nextgram
-    npm install
-    code .
+    npx create-next-app
+    # or
+    yarn create next-app
     ```
 
 ## Configure next.js to run in Debug mode
 
-Next.js can be started in `debug mode` by using the `--inspect` flag like regular Node processes. We have contributed this in [PR3294](https://github.com/zeit/next.js/pull/3294) for Next.js, so you'll have to remember to start your `next` process with this flag, as VS Code otherwise won't be able to connect to your Node process and debug your server-side code. The following `launch.json` sets this flag for you, but if you start your Next process in different way, remember to add this flag.
+Next.js can be started in `debug mode` by using the `--inspect` flag like regular Node processes. We have contributed this in [PR3294](https://github.com/zeit/next.js/pull/3294) for Next.js, so you'll have to remember to start your `next` process with this flag, as VS Code otherwise won't be able to connect to your Node process and debug your server-side code. In VS Code go to **Settings > Debug > JavaScript: Auto Attach Filter** and change it from `disabled` to `always`.
 
 ## Configure launch.json File
 
@@ -51,10 +50,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "type": "node",
             "request": "launch",
             "name": "Next: Node",
-            "runtimeExecutable": "next",
-            "runtimeArgs": [
-                "--inspect"
-            ],
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/next",
             "port": 9229,
             "console": "integratedTerminal"
         }
