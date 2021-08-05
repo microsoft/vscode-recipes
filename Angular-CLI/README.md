@@ -36,7 +36,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
 
    ![add-chrome-debug](https://user-images.githubusercontent.com/2836367/27004175-77582668-4dca-11e7-9ce8-30ef3af64a36.png)
 
-- Replace content of the generated launch.json with the following three configurations (use `pwa-msedge` for MS Edge):
+- Replace content of the generated launch.json with the following three configurations (use `msedge` for MS Edge):
 
   ```json
   {
@@ -44,7 +44,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
     "configurations": [
       {
         "name": "ng serve",
-        "type": "pwa-chrome",
+        "type": "chrome",
         "request": "launch",
         "preLaunchTask": "npm: start",
         "url": "http://localhost:4200/#",
@@ -59,7 +59,7 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
       },
       {
         "name": "ng test",
-        "type": "pwa-chrome",
+        "type": "chrome",
         "request": "launch",
         "url": "http://localhost:9876/debug.html",
         "webRoot": "${workspaceFolder}",
