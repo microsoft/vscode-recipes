@@ -105,17 +105,18 @@ If you don't have all of your tests under a common "test" directory, then the fo
 }
 ```
 
-If you are running mocha will multiple arguments, you may consider creating an opt file that store all these arguments (i.e name it as mocha.opts).
+If you are running mocha will multiple arguments, you may consider creating an opt file that store all these arguments (i.e name it as mocha.json).
 
-Example file contents with mocha arguments: 
+Example file contents with mocha arguments:
 
+```json
+{
+  "colors": true,
+  "timeout": 999999
+}
 ```
---timeout 999999
---colors
---full-trace  
-```
 
-Reference the mocha opts file with --opts in configuration as shown below
+Reference the mocha config file with --config in configuration as shown below
 
 ```json
 {
@@ -127,8 +128,8 @@ Reference the mocha opts file with --opts in configuration as shown below
             "name": "Mocha Test All with Options",
             "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
             "args": [
-                "--opts", 
-                "${workspaceFolder}/support/mocha.opts",
+                "--config",
+                "${workspaceFolder}/support/mocha.json",
                 "${workspaceFolder}/test"
             ],
             "console": "integratedTerminal",
@@ -140,6 +141,8 @@ Reference the mocha opts file with --opts in configuration as shown below
     ]
 }
 ```
+
+Mocha supports [many configuration](https://mochajs.org/#configuring-mocha-nodejs), typical of modern command-line tools.
 
 ## Debugging all tests
 
@@ -164,3 +167,16 @@ You can debug the test you're editing by following the steps below:
 3. Your breakpoint will now be hit
 
 ![current](current.gif)
+
+## Tips
+
+If you be warned by `Configured debug type 'pwa-node' is not supported.` in VSCode
+
+Update the content of the `.vscode/settings.json` with the following configurations:
+
+```json
+{
+  "debug.chrome.useV3": true,
+  "debug.javascript.usePreview": false
+}
+```
