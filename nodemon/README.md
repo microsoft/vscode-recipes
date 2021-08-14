@@ -31,7 +31,7 @@ Update your `package.json` section to:
 "scripts": {
     "start": "node ./bin/www",
     "debug": "nodemon --inspect ./bin/www"
-}
+},
 ```  
 
 ## Configure VS Code debugging with a launch.json file
