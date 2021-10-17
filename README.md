@@ -34,10 +34,6 @@ A collection of recipes for using VS Code with particular technologies.
 
 - [Debugging Python](https://github.com/Microsoft/vscode-recipes/tree/master/debugging%20python)
 
-## Container Technology
-
-- [Debugging TypeScript in a Docker Container](https://github.com/weinand/vscode-recipes/tree/master/Docker-TypeScript)
-
 ## Runtimes
 
 - [Debugging Electron Main and Renderer processes](https://github.com/Microsoft/vscode-recipes/blob/master/Electron)
