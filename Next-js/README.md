@@ -2,9 +2,9 @@
 
 By [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
-This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [next.js](https://github.com/zeit/next.js) applications.
+This recipe shows how to use the built-in JavaScript deubgger in VS Code to debug [next.js](https://github.com/zeit/next.js) applications.
 
-Next.js allows ReactJS to be used both on the server and client, which is a great match for VS Code, as we can debug both the server and client at the same time! This means that you'll need to use two debugger instances within VS Code to debug both ends. This is the reason for why you'll need both the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug).
+Next.js allows ReactJS to be used both on the server and client, which is a great match for VS Code, as we can debug both the server and client at the same time! This means that you'll need to use two debugger instances within VS Code to debug both ends.
 
 **Note:** Please make sure you are using **Next.js 4.2.0-canary.1 or newer**, as our debuggers relies on source maps, and there's been a bunch of improvements for this in next.js.
 
@@ -12,9 +12,7 @@ Next.js allows ReactJS to be used both on the server and client, which is a grea
 
 1. Make sure to have the latest version of VS Code installed.
 
-2. Make sure to the latest version of [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed in VS Code.
-
-3. This guide assumes that you are using the official sample app [nextgram](https://github.com/zeit/nextgram). Clone the repo to get started:
+2. This guide assumes that you are using the official sample app [nextgram](https://github.com/zeit/nextgram). Clone the repo to get started:
     >
     ```
     git clone git@github.com:now-examples/nextgram.git

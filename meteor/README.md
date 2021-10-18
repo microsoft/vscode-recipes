@@ -2,9 +2,9 @@
 
 by [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
-This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [meteor](https://www.meteor.com/) applications.
+This recipe shows how to use the built-in JavaScript deubgger in VS Code to debug [meteor](https://www.meteor.com/) applications.
 
-Meteor is used to write applications that run on both the server and client with the same code, and this is a great match for VS Code, as we can debug both the server and client at the same time! This means that you'll need to use two debugger instances within VS Code to debug both ends. This is the reason for why you'll need both the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug).
+Meteor is used to write applications that run on both the server and client with the same code, and this is a great match for VS Code, as we can debug both the server and client at the same time! This means that you'll need to use two debugger instances within VS Code to debug both ends.
 
 **Note:** Please make sure you are using **Meteor 1.6+ and Node.js 8.9+**, as our debuggers rely on the new Inspector protocol, which landed in [Meteor PR9201](https://github.com/meteor/meteor/pull/9201)
 
@@ -12,9 +12,7 @@ Meteor is used to write applications that run on both the server and client with
 
 1. Make sure to have the latest version of VS Code installed.
 
-2. Make sure to have the latest version of [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed in VS Code.
-
-3. This guide assumes that you are using the official sample app [simple-todos-react](https://github.com/meteor/simple-todos-react). Clone the repo to get started:
+2. This guide assumes that you are using the official sample app [simple-todos-react](https://github.com/meteor/simple-todos-react). Clone the repo to get started:
     >
     ```
     git clone https://github.com/meteor/simple-todos-react

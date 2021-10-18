@@ -2,9 +2,9 @@
 
 By [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
-This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [Electron](https://electron.atom.io) applications.
+This recipe shows how to use the built-in JavaScript deubgger in VS Code to debug [Electron](https://electron.atom.io) applications.
 
-[Electron](https://electron.atom.io) applications can consist of two process types: a main process type running in NodeJS, and a renderer process type in Chromium. This means that you'll need to use two debugger instances within VS Code to debug both processes. This is the reason you'll need both the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension.
+[Electron](https://electron.atom.io) applications can consist of two process types: a main process type running in NodeJS, and a renderer process type in Chromium. This means that you'll need to use two debugger instances within VS Code to debug both processes.
 
 **Note:** Please make sure you are using **Electron 1.7.4 or newer**, as our debuggers rely on the inspector protocol.
 
@@ -12,9 +12,7 @@ This recipe shows how to use the built-in Node Debugger and the [Debugger for Ch
 
 1. Make sure you're running the latest version of VS Code.
 
-2. Also make sure the latest version of the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension is installed in VS Code.
-
-3. This guide assumes that you are using the [electron-quick-start project](https://github.com/electron/electron-quick-start). Clone the repo to get started:
+2. This guide assumes that you are using the [electron-quick-start project](https://github.com/electron/electron-quick-start). Clone the repo to get started:
     >
     ```
     git clone https://github.com/electron/electron-quick-start.git
