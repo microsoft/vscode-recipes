@@ -21,10 +21,6 @@ Next.js allows ReactJS to be used both on the server and client, which is a grea
     code .
     ```
 
-## Configure next.js to run in Debug mode
-
-Next.js can be started in `debug mode` by using the `--inspect` flag like regular Node processes. We have contributed this in [PR3294](https://github.com/zeit/next.js/pull/3294) for Next.js, so you'll have to remember to start your `next` process with this flag, as VS Code otherwise won't be able to connect to your Node process and debug your server-side code. The following `launch.json` sets this flag for you, but if you start your Next process in different way, remember to add this flag.
-
 ## Configure launch.json File
 
 - Click on the Debugging icon in the Activity Bar to bring up the Debug view.

@@ -103,12 +103,6 @@ The principles are very similar to those outlined above. In your `package.json` 
     "test": "meteor test --driver-package=practicalmeteor:mocha --port 3010",
 ```
 
-Add another line with the new `--inspect` option:
-
-```json
-    "test-debug": "meteor test --inspect --driver-package=practicalmeteor:mocha --port 3010",
-```
-
 To enable debugging of these test scripts, you need to add two new launch configurations to your `launch.json` file - one for the server side tests, and the other for client side:
 
 ```json
@@ -119,10 +113,9 @@ To enable debugging of these test scripts, you need to add two new launch config
       "runtimeExecutable": "npm",
       "runtimeArgs": [
         "run",
-        "test-debug"
+        "test"
       ],
       "port": 9229,
-      "timeout": 60000
     },
     {
       "type": "chrome",
@@ -133,7 +126,7 @@ To enable debugging of these test scripts, you need to add two new launch config
     },
 ```
 
-Since it can take a while for the test server to fire up, increasing the timeout to 60 seconds may help. You can also add a new section in the `compounds` section of this file that will run both these tests together in a chrome browser:
+You can also add a new section in the `compounds` section of this file that will run both these tests together in a chrome browser:
 
 ```json
    {

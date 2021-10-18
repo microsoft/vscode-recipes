@@ -40,12 +40,7 @@ VS Code automatically detects a MERN based project and creates this launch confi
     "request": "launch",
     "name": "Launch Program",
     "runtimeExecutable": "nodemon",
-    "runtimeArgs": [
-        "--inspect=9222"
-    ],
     "program": "${workspaceFolder}/index.js",
-    "port": 9222,
-    "restart": true,
     "env": {
         "BABEL_DISABLE_CACHE": "1",
         "NODE_ENV": "development"
