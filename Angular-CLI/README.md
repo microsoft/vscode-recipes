@@ -47,15 +47,8 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         "type": "chrome",
         "request": "launch",
         "preLaunchTask": "npm: start",
-        "url": "http://localhost:4200/#",
-        "webRoot": "${workspaceFolder}",
-        "sourceMapPathOverrides": {
-          "webpack:/*": "${webRoot}/*",
-          "/./*": "${webRoot}/*",
-          "/src/*": "${webRoot}/*",
-          "/*": "*",
-          "/./~/*": "${webRoot}/node_modules/*"
-        }
+        "url": "http://localhost:4200",
+        "webRoot": "${workspaceFolder}"
       },
       {
         "name": "ng test",
@@ -63,13 +56,8 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         "request": "launch",
         "url": "http://localhost:9876/debug.html",
         "webRoot": "${workspaceFolder}",
-        "sourceMaps": true,
         "sourceMapPathOverrides": {
-          "webpack:/*": "${webRoot}/*",
-          "/./*": "${webRoot}/*",
-          "/src/*": "${webRoot}/*",
-          "/*": "*",
-          "/./~/*": "${webRoot}/node_modules/*"
+          "./src/*": "${workspaceFolder}/src/*"
         }
       },
       {
