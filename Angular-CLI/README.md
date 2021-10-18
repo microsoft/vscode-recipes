@@ -77,7 +77,6 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
         "type": "node",
         "request": "launch",
         "program": "${workspaceFolder}/node_modules/protractor/bin/protractor",
-        "protocol": "inspector",
         "args": ["${workspaceFolder}/e2e/protractor.conf.js"]
       }
     ]
@@ -85,13 +84,13 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
   ```
 
   - Since `ng serve` also compiles the Angular application it can be used as a build task if you prefer the "PROBLEMS" tab to `Ctrl + click` in the terminal (for smaller screens you could open the terminal only when the status bar shows there are problems).
-  
+
   - The following `npm: start` task runs in the background, so we never expect it to fully complete. Instead we define a [problem matcher](https://code.visualstudio.com/docs/editor/tasks#_processing-task-output-with-problem-matchers), which alerts us that the task is ready.
-  
+
   > **Please note**: Running `npm start` instead of `ng serve` ensures the app is served with the version of @angular/cli specified in package.json.
-  
+
   Add the following `npm` task to your `tasks.json` file:
-  
+
   ```json
   {
     "version": "2.0.0",
@@ -168,5 +167,3 @@ You can also debug your end-to-end tests running in Protractor with VS Code.
 2. Set a breakpoint in **app.e2e-spec.ts** on a line in one of the end-to-end tests.
 
 3. Now go to the Debug view in VS Code, select the **'ng e2e'** configuration, then press F5 or click the green button to run Protractor in a debug session.
-
-Notice: You might need to update the `"protocol"` property to `legacy` if you are using an older version of Node (older than Node 8)

@@ -40,7 +40,6 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
                 "type": "node",
                 "request": "launch",
                 "name": "Electron: Main",
-                "protocol": "inspector",
                 "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
                 "runtimeArgs": [
                     "--remote-debugging-port=9223",
