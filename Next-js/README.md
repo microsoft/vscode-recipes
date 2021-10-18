@@ -51,12 +51,9 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "type": "node",
             "request": "launch",
             "name": "Next: Node",
-            "runtimeExecutable": "next",
-            "runtimeArgs": [
-                "--inspect"
-            ],
-            "port": 9229,
-            "console": "integratedTerminal"
+            "outputCapture": "std",
+            "program": "./node_modules/next/dist/bin/next",
+            "args": ["dev"],
         }
     ],
     "compounds": [
