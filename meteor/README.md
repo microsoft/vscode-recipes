@@ -21,19 +21,6 @@ Meteor is used to write applications that run on both the server and client with
     code .
     ```
 
-## Configure Meteor to run in Debug mode
-
-Meteor can be started in `debug mode` by using the `--inspect` flag like regular Node processes. The easiest way to enable the debug mode is to add an `npm debug script` that starts `meteor` with the right flag.
-
-Update your `package.json` section to:
-
-```json
-"scripts": {
-    "start": "meteor run",
-    "debug": "meteor run --inspect-brk=9229"
-},
-```
-
 ## Configure VS Code debugging with a launch.json file
 
 - Click on the Debugging icon in the Activity Bar to bring up the Debug view.
@@ -60,10 +47,8 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "request": "launch",
             "name": "Meteor: Node",
             "runtimeExecutable": "npm",
-            "runtimeArgs": ["run", "debug"],
+            "runtimeArgs": ["start"],
             "outputCapture": "std",
-            "port": 9229,
-            "timeout": 30000
         }
     ],
     "compounds": [
