@@ -2,9 +2,9 @@
 
 by [Kenneth Auchenberg](https://twitter.com/auchenberg)
 
-This recipe shows how to use the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug) extension with VS Code to debug [meteor](https://www.meteor.com/) applications.
+This recipe shows how to use the built-in JavaScript deubgger in VS Code to debug [meteor](https://www.meteor.com/) applications.
 
-Meteor is used to write applications that run on both the server and client with the same code, and this is a great match for VS Code, as we can debug both the server and client at the same time! This means that you'll need to use two debugger instances within VS Code to debug both ends. This is the reason for why you'll need both the built-in Node Debugger and the [Debugger for Chrome](https://github.com/Microsoft/vscode-chrome-debug).
+Meteor is used to write applications that run on both the server and client with the same code, and this is a great match for VS Code, as we can debug both the server and client at the same time! This means that you'll need to use two debugger instances within VS Code to debug both ends.
 
 **Note:** Please make sure you are using **Meteor 1.6+ and Node.js 8.9+**, as our debuggers rely on the new Inspector protocol, which landed in [Meteor PR9201](https://github.com/meteor/meteor/pull/9201)
 
@@ -12,9 +12,7 @@ Meteor is used to write applications that run on both the server and client with
 
 1. Make sure to have the latest version of VS Code installed.
 
-2. Make sure to have the latest version of [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed in VS Code.
-
-3. This guide assumes that you are using the official sample app [simple-todos-react](https://github.com/meteor/simple-todos-react). Clone the repo to get started:
+2. This guide assumes that you are using the official sample app [simple-todos-react](https://github.com/meteor/simple-todos-react). Clone the repo to get started:
     >
     ```
     git clone https://github.com/meteor/simple-todos-react
@@ -22,19 +20,6 @@ Meteor is used to write applications that run on both the server and client with
     npm install
     code .
     ```
-
-## Configure Meteor to run in Debug mode
-
-Meteor can be started in `debug mode` by using the `--inspect` flag like regular Node processes. The easiest way to enable the debug mode is to add an `npm debug script` that starts `meteor` with the right flag.
-
-Update your `package.json` section to:
-
-```json
-"scripts": {
-    "start": "meteor run",
-    "debug": "meteor run --inspect-brk=9229"
-},
-```
 
 ## Configure VS Code debugging with a launch.json file
 
@@ -62,10 +47,8 @@ Then click on the gear icon to configure a launch.json file, selecting **Chrome*
             "request": "launch",
             "name": "Meteor: Node",
             "runtimeExecutable": "npm",
-            "runtimeArgs": ["run", "debug"],
+            "runtimeArgs": ["start"],
             "outputCapture": "std",
-            "port": 9229,
-            "timeout": 30000
         }
     ],
     "compounds": [
@@ -120,12 +103,6 @@ The principles are very similar to those outlined above. In your `package.json` 
     "test": "meteor test --driver-package=practicalmeteor:mocha --port 3010",
 ```
 
-Add another line with the new `--inspect` option:
-
-```json
-    "test-debug": "meteor test --inspect --driver-package=practicalmeteor:mocha --port 3010",
-```
-
 To enable debugging of these test scripts, you need to add two new launch configurations to your `launch.json` file - one for the server side tests, and the other for client side:
 
 ```json
@@ -136,10 +113,9 @@ To enable debugging of these test scripts, you need to add two new launch config
       "runtimeExecutable": "npm",
       "runtimeArgs": [
         "run",
-        "test-debug"
+        "test"
       ],
       "port": 9229,
-      "timeout": 60000
     },
     {
       "type": "chrome",
@@ -150,7 +126,7 @@ To enable debugging of these test scripts, you need to add two new launch config
     },
 ```
 
-Since it can take a while for the test server to fire up, increasing the timeout to 60 seconds may help. You can also add a new section in the `compounds` section of this file that will run both these tests together in a chrome browser:
+You can also add a new section in the `compounds` section of this file that will run both these tests together in a chrome browser:
 
 ```json
    {
