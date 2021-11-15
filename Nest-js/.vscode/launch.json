@@ -1,0 +1,73 @@
+{
+  // Use IntelliSense to learn about possible Node.js debug attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/src/index.ts",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch in Docker",
+      "preLaunchTask": "tsc-watch",
+      "protocol": "auto",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [ "run", "docker-debug" ],
+      "port": 5858,
+      "restart": true,
+      "timeout": 60000,
+      "localRoot": "${workspaceFolder}/dist/src",
+      "remoteRoot": "/server/dist/src",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Docker",
+      "preLaunchTask": "tsc-watch",
+      "protocol": "auto",
+      "port": 5858,
+      "restart": true,
+      "sourceMaps": true,
+      "localRoot": "${workspaceFolder}/dist/src",
+      "remoteRoot": "/server/dist/src",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "skipFiles": [
+        "<node_internals>/**/*.js",
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Local Nodemon",
+      "preLaunchTask": "tsc-watch",
+      "protocol": "auto",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [ "run", "debug" ],
+      "restart": true,
+      "port": 5858,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ]
+    }
+  ]
+}
