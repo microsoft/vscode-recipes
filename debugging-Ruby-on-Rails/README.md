@@ -2,13 +2,13 @@
 
 by [@karuppasamy](https://twitter.com/samykaruppa)
 
-This recipe shows how to debug a Ruby on Rails (without jRuby) application using the VS Code extension [vscode-ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) along with the Ruby gems [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [ruby-debug-base](https://rubygems.org/gems/ruby-debug-base) or [debase](https://rubygems.org/gems/debase).
+This recipe shows how to debug a Ruby on Rails (without jRuby) application using the [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) VS Code extension along with the Ruby gems [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [ruby-debug-base](https://rubygems.org/gems/ruby-debug-base) or [debase](https://rubygems.org/gems/debase).
 
 ## Getting Started
 
 1. Make sure you have the latest version of VS Code installed.
 
-2. Make sure you have the extension [vscode-ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) installed.
+2. Make sure you have the extension [rebornix.Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby) installed.
 
 2. If you are using Ruby v1.9.x, add [ruby-debug-ide](https://rubygems.org/gems/ruby-debug-ide) and [ruby-debug-base19x](https://rubygems.org/gems/ruby-debug-base19x) gems in your Gemfile followed by the `bundle install` command in your terminal.
 
